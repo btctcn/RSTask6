@@ -3,24 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */; };
+		209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */; };
+		209D4C92249D751C00E9AFF3 /* RST6StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209D4C91249D751C00E9AFF3 /* RST6StartView.xib */; };
+		209D4C95249E367800E9AFF3 /* RST6StartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C94249E367800E9AFF3 /* RST6StartView.m */; };
+		209D4C98249E64D800E9AFF3 /* UIWindow+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */; };
 		20AD85B7249D45E800A2CB96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AD85B6249D45E800A2CB96 /* AppDelegate.m */; };
 		20AD85C5249D45F100A2CB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AD85C4249D45F100A2CB96 /* Assets.xcassets */; };
 		20AD85CB249D45F100A2CB96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AD85CA249D45F100A2CB96 /* main.m */; };
 		20AD85D2249D565A00A2CB96 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */; };
+		20AD85D9249D67C600A2CB96 /* RST6ContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AD85D8249D67C600A2CB96 /* RST6ContainerViewController.m */; };
+		86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		20AD85B2249D45E800A2CB96 /* RSTask5.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask5.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		209D4C88249D6C4300E9AFF3 /* RST6StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6StartViewController.h; sourceTree = "<group>"; };
+		209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6StartViewController.m; sourceTree = "<group>"; };
+		209D4C8E249D6CA900E9AFF3 /* RST6TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6TabBarController.h; sourceTree = "<group>"; };
+		209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6TabBarController.m; sourceTree = "<group>"; };
+		209D4C91249D751C00E9AFF3 /* RST6StartView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RST6StartView.xib; sourceTree = "<group>"; };
+		209D4C93249E367800E9AFF3 /* RST6StartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6StartView.h; sourceTree = "<group>"; };
+		209D4C94249E367800E9AFF3 /* RST6StartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6StartView.m; sourceTree = "<group>"; };
+		209D4C96249E64D800E9AFF3 /* UIWindow+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Additions.h"; sourceTree = "<group>"; };
+		209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Additions.m"; sourceTree = "<group>"; };
+		20AD85B2249D45E800A2CB96 /* RSTask6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AD85B5249D45E800A2CB96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20AD85B6249D45E800A2CB96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		20AD85C4249D45F100A2CB96 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20AD85C9249D45F100A2CB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20AD85CA249D45F100A2CB96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		20AD85D7249D67C600A2CB96 /* RST6ContainerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6ContainerViewController.h; sourceTree = "<group>"; };
+		20AD85D8249D67C600A2CB96 /* RST6ContainerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6ContainerViewController.m; sourceTree = "<group>"; };
+		5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSTask6.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.release.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.release.xcconfig"; sourceTree = "<group>"; };
+		90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.debug.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -37,20 +59,22 @@
 		20AD85A9249D45E800A2CB96 = {
 			isa = PBXGroup;
 			children = (
-				20AD85B4249D45E800A2CB96 /* RSTask5 */,
+				20AD85B4249D45E800A2CB96 /* RSTask6 */,
 				20AD85B3249D45E800A2CB96 /* Products */,
+				BA6FB21305AE48443C98FA29 /* Pods */,
+				BF722FEB551C7EF98506366D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		20AD85B3249D45E800A2CB96 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20AD85B2249D45E800A2CB96 /* RSTask5.app */,
+				20AD85B2249D45E800A2CB96 /* RSTask6.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20AD85B4249D45E800A2CB96 /* RSTask5 */ = {
+		20AD85B4249D45E800A2CB96 /* RSTask6 */ = {
 			isa = PBXGroup;
 			children = (
 				20AD85B5249D45E800A2CB96 /* AppDelegate.h */,
@@ -59,28 +83,58 @@
 				20AD85C9249D45F100A2CB96 /* Info.plist */,
 				20AD85CA249D45F100A2CB96 /* main.m */,
 				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
+				20AD85D7249D67C600A2CB96 /* RST6ContainerViewController.h */,
+				20AD85D8249D67C600A2CB96 /* RST6ContainerViewController.m */,
+				209D4C88249D6C4300E9AFF3 /* RST6StartViewController.h */,
+				209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */,
+				209D4C8E249D6CA900E9AFF3 /* RST6TabBarController.h */,
+				209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */,
+				209D4C91249D751C00E9AFF3 /* RST6StartView.xib */,
+				209D4C93249E367800E9AFF3 /* RST6StartView.h */,
+				209D4C94249E367800E9AFF3 /* RST6StartView.m */,
+				209D4C96249E64D800E9AFF3 /* UIWindow+Additions.h */,
+				209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */,
 			);
-			path = RSTask5;
+			path = RSTask6;
+			sourceTree = "<group>";
+		};
+		BA6FB21305AE48443C98FA29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */,
+				86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BF722FEB551C7EF98506366D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20AD85B1249D45E800A2CB96 /* RSTask5 */ = {
+		20AD85B1249D45E800A2CB96 /* RSTask6 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20AD85CE249D45F200A2CB96 /* Build configuration list for PBXNativeTarget "RSTask5" */;
+			buildConfigurationList = 20AD85CE249D45F200A2CB96 /* Build configuration list for PBXNativeTarget "RSTask6" */;
 			buildPhases = (
+				0C0EDB9CAABE5755189BA1E2 /* [CP] Check Pods Manifest.lock */,
 				20AD85AE249D45E800A2CB96 /* Sources */,
 				20AD85AF249D45E800A2CB96 /* Frameworks */,
 				20AD85B0249D45E800A2CB96 /* Resources */,
+				BA09F4015C1C8A3DAF1DC3BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = RSTask5;
+			name = RSTask6;
 			productName = RSTask5;
-			productReference = 20AD85B2249D45E800A2CB96 /* RSTask5.app */;
+			productReference = 20AD85B2249D45E800A2CB96 /* RSTask6.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +151,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20AD85AD249D45E800A2CB96 /* Build configuration list for PBXProject "RSTask5" */;
+			buildConfigurationList = 20AD85AD249D45E800A2CB96 /* Build configuration list for PBXProject "RSTask6" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,7 +164,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20AD85B1249D45E800A2CB96 /* RSTask5 */,
+				20AD85B1249D45E800A2CB96 /* RSTask6 */,
 			);
 		};
 /* End PBXProject section */
@@ -121,19 +175,67 @@
 			buildActionMask = 2147483647;
 			files = (
 				20AD85D2249D565A00A2CB96 /* Launch Screen.storyboard in Resources */,
+				209D4C92249D751C00E9AFF3 /* RST6StartView.xib in Resources */,
 				20AD85C5249D45F100A2CB96 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C0EDB9CAABE5755189BA1E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSTask6-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA09F4015C1C8A3DAF1DC3BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSTask6/Pods-RSTask6-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSTask6/Pods-RSTask6-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSTask6/Pods-RSTask6-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		20AD85AE249D45E800A2CB96 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */,
 				20AD85CB249D45F100A2CB96 /* main.m in Sources */,
+				209D4C98249E64D800E9AFF3 /* UIWindow+Additions.m in Sources */,
+				209D4C95249E367800E9AFF3 /* RST6StartView.m in Sources */,
 				20AD85B7249D45E800A2CB96 /* AppDelegate.m in Sources */,
+				20AD85D9249D67C600A2CB96 /* RST6ContainerViewController.m in Sources */,
+				209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,16 +370,17 @@
 		};
 		20AD85CF249D45F200A2CB96 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2Q3Q59KE9;
-				INFOPLIST_FILE = RSTask5/Info.plist;
+				INFOPLIST_FILE = RSTask6/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.btctcn.RSTask5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.btctcn.RSTask6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -285,16 +388,17 @@
 		};
 		20AD85D0249D45F200A2CB96 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q2Q3Q59KE9;
-				INFOPLIST_FILE = RSTask5/Info.plist;
+				INFOPLIST_FILE = RSTask6/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.btctcn.RSTask5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.btctcn.RSTask6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,7 +407,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20AD85AD249D45E800A2CB96 /* Build configuration list for PBXProject "RSTask5" */ = {
+		20AD85AD249D45E800A2CB96 /* Build configuration list for PBXProject "RSTask6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20AD85CC249D45F200A2CB96 /* Debug */,
@@ -312,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20AD85CE249D45F200A2CB96 /* Build configuration list for PBXNativeTarget "RSTask5" */ = {
+		20AD85CE249D45F200A2CB96 /* Build configuration list for PBXNativeTarget "RSTask6" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20AD85CF249D45F200A2CB96 /* Debug */,

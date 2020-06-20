@@ -93,6 +93,9 @@
                 <constraint firstItem="QUZ-b3-kNq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nr0-dD-Xcd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="startButton" destination="QUZ-b3-kNq" id="Duw-WA-h23"/>
+            </connections>
             <point key="canvasLocation" x="139" y="153"/>
         </view>
     </objects>
