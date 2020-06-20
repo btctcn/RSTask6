@@ -1,5 +1,4 @@
 #import "AppDelegate.h"
-#import "RST6ContainerViewController.h"
 #import "RST6StartViewController.h"
 #import "UIWindow+Additions.h"
 #import "RST6TabBarController.h"

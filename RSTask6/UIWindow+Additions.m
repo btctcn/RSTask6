@@ -1,11 +1,3 @@
-//
-//  UIWindow+UIWindowAdditions.m
-//  RSTask6
-//
-//  Created by Andrey Butcitcyn on 20.06.2020.
-//  Copyright © 2020 Andrey Butcitcyn. All rights reserved.
-//
-
 #import "UIWindow+Additions.h"
 
 @implementation UIWindow (Additions)

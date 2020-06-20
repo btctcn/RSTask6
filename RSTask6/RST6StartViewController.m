@@ -1,11 +1,6 @@
 #import "RST6StartViewController.h"
 #import "RST6StartView.h"
 
-
-@interface RST6StartViewController ()
-
-@end
-
 @implementation RST6StartViewController
 
 -(void)viewDidLoad{
