@@ -12,6 +12,8 @@
 		209D4C92249D751C00E9AFF3 /* RST6StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209D4C91249D751C00E9AFF3 /* RST6StartView.xib */; };
 		209D4C95249E367800E9AFF3 /* RST6StartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C94249E367800E9AFF3 /* RST6StartView.m */; };
 		209D4C98249E64D800E9AFF3 /* UIWindow+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */; };
+		209D4C9B249E6D4300E9AFF3 /* RST6InfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C9A249E6D4300E9AFF3 /* RST6InfoController.m */; };
+		209D4C9E249E6D8D00E9AFF3 /* RST6GalleryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C9D249E6D8D00E9AFF3 /* RST6GalleryController.m */; };
 		20AD85B7249D45E800A2CB96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AD85B6249D45E800A2CB96 /* AppDelegate.m */; };
 		20AD85C5249D45F100A2CB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AD85C4249D45F100A2CB96 /* Assets.xcassets */; };
 		20AD85CB249D45F100A2CB96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AD85CA249D45F100A2CB96 /* main.m */; };
@@ -29,6 +31,10 @@
 		209D4C94249E367800E9AFF3 /* RST6StartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6StartView.m; sourceTree = "<group>"; };
 		209D4C96249E64D800E9AFF3 /* UIWindow+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIWindow+Additions.h"; sourceTree = "<group>"; };
 		209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+Additions.m"; sourceTree = "<group>"; };
+		209D4C99249E6D4300E9AFF3 /* RST6InfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6InfoController.h; sourceTree = "<group>"; };
+		209D4C9A249E6D4300E9AFF3 /* RST6InfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6InfoController.m; sourceTree = "<group>"; };
+		209D4C9C249E6D8D00E9AFF3 /* RST6GalleryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6GalleryController.h; sourceTree = "<group>"; };
+		209D4C9D249E6D8D00E9AFF3 /* RST6GalleryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6GalleryController.m; sourceTree = "<group>"; };
 		20AD85B2249D45E800A2CB96 /* RSTask6.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSTask6.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20AD85B5249D45E800A2CB96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20AD85B6249D45E800A2CB96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -53,6 +59,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		209D4C9F249E6E0500E9AFF3 /* Additions */ = {
+			isa = PBXGroup;
+			children = (
+				209D4C96249E64D800E9AFF3 /* UIWindow+Additions.h */,
+				209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */,
+			);
+			path = Additions;
+			sourceTree = "<group>";
+		};
+		209D4CA0249E6E5300E9AFF3 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20AD85C4249D45F100A2CB96 /* Assets.xcassets */,
+				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
+				209D4C91249D751C00E9AFF3 /* RST6StartView.xib */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		209D4CA1249E6E7700E9AFF3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				20AD85B5249D45E800A2CB96 /* AppDelegate.h */,
+				20AD85B6249D45E800A2CB96 /* AppDelegate.m */,
+				20AD85C9249D45F100A2CB96 /* Info.plist */,
+				20AD85CA249D45F100A2CB96 /* main.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		209D4CA2249E6E8700E9AFF3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				209D4C88249D6C4300E9AFF3 /* RST6StartViewController.h */,
+				209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */,
+				209D4C8E249D6CA900E9AFF3 /* RST6TabBarController.h */,
+				209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */,
+				209D4C93249E367800E9AFF3 /* RST6StartView.h */,
+				209D4C94249E367800E9AFF3 /* RST6StartView.m */,
+				209D4C99249E6D4300E9AFF3 /* RST6InfoController.h */,
+				209D4C9A249E6D4300E9AFF3 /* RST6InfoController.m */,
+				209D4C9C249E6D8D00E9AFF3 /* RST6GalleryController.h */,
+				209D4C9D249E6D8D00E9AFF3 /* RST6GalleryController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		20AD85A9249D45E800A2CB96 = {
 			isa = PBXGroup;
 			children = (
@@ -74,21 +127,10 @@
 		20AD85B4249D45E800A2CB96 /* RSTask6 */ = {
 			isa = PBXGroup;
 			children = (
-				20AD85B5249D45E800A2CB96 /* AppDelegate.h */,
-				20AD85B6249D45E800A2CB96 /* AppDelegate.m */,
-				20AD85C4249D45F100A2CB96 /* Assets.xcassets */,
-				20AD85C9249D45F100A2CB96 /* Info.plist */,
-				20AD85CA249D45F100A2CB96 /* main.m */,
-				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
-				209D4C88249D6C4300E9AFF3 /* RST6StartViewController.h */,
-				209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */,
-				209D4C8E249D6CA900E9AFF3 /* RST6TabBarController.h */,
-				209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */,
-				209D4C91249D751C00E9AFF3 /* RST6StartView.xib */,
-				209D4C93249E367800E9AFF3 /* RST6StartView.h */,
-				209D4C94249E367800E9AFF3 /* RST6StartView.m */,
-				209D4C96249E64D800E9AFF3 /* UIWindow+Additions.h */,
-				209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */,
+				209D4CA2249E6E8700E9AFF3 /* Controllers */,
+				209D4CA1249E6E7700E9AFF3 /* Main */,
+				209D4CA0249E6E5300E9AFF3 /* UI */,
+				209D4C9F249E6E0500E9AFF3 /* Additions */,
 			);
 			path = RSTask6;
 			sourceTree = "<group>";
@@ -227,7 +269,9 @@
 				209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */,
 				20AD85CB249D45F100A2CB96 /* main.m in Sources */,
 				209D4C98249E64D800E9AFF3 /* UIWindow+Additions.m in Sources */,
+				209D4C9B249E6D4300E9AFF3 /* RST6InfoController.m in Sources */,
 				209D4C95249E367800E9AFF3 /* RST6StartView.m in Sources */,
+				209D4C9E249E6D8D00E9AFF3 /* RST6GalleryController.m in Sources */,
 				20AD85B7249D45E800A2CB96 /* AppDelegate.m in Sources */,
 				209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */,
 			);
