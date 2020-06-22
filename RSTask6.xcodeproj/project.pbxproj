@@ -83,7 +83,6 @@
 			children = (
 				20AD85B5249D45E800A2CB96 /* AppDelegate.h */,
 				20AD85B6249D45E800A2CB96 /* AppDelegate.m */,
-				20AD85C9249D45F100A2CB96 /* Info.plist */,
 				20AD85CA249D45F100A2CB96 /* main.m */,
 			);
 			path = Main;
@@ -127,6 +126,7 @@
 		20AD85B4249D45E800A2CB96 /* RSTask6 */ = {
 			isa = PBXGroup;
 			children = (
+				20AD85C9249D45F100A2CB96 /* Info.plist */,
 				209D4CA2249E6E8700E9AFF3 /* Controllers */,
 				209D4CA1249E6E7700E9AFF3 /* Main */,
 				209D4CA0249E6E5300E9AFF3 /* UI */,
