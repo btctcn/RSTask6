@@ -34,8 +34,8 @@
                                 <constraint firstAttribute="width" constant="70" id="WTq-yw-CLF"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-qY-ilh" userLabel="sqrView" customClass="RST6AnimatedView">
-                            <rect key="frame" x="115" y="0.0" width="70" height="70"/>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-qY-ilh" userLabel="sqrView" customClass="RST6SquareView">
+                            <rect key="frame" x="108" y="0.0" width="70" height="70"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="70" id="2mI-TY-3Gk"/>
@@ -54,20 +54,14 @@
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="REh-DM-uFF" firstAttribute="centerY" secondItem="ZOo-6C-GBL" secondAttribute="centerY" id="0nf-as-sfB"/>
-                        <constraint firstItem="U2p-oK-sgY" firstAttribute="centerY" secondItem="ZOo-6C-GBL" secondAttribute="centerY" id="6Hf-fj-lR2"/>
                         <constraint firstItem="DIm-qY-ilh" firstAttribute="centerY" secondItem="ZOo-6C-GBL" secondAttribute="centerY" id="7sL-8S-eNV"/>
                         <constraint firstAttribute="height" constant="70" id="IzV-2D-Brh"/>
-                        <constraint firstItem="DIm-qY-ilh" firstAttribute="centerX" secondItem="ZOo-6C-GBL" secondAttribute="centerX" id="Qvy-iB-zk7"/>
+                        <constraint firstItem="DIm-qY-ilh" firstAttribute="centerX" secondItem="ZOo-6C-GBL" secondAttribute="centerX" constant="-7" id="Qvy-iB-zk7"/>
                         <constraint firstItem="U2p-oK-sgY" firstAttribute="top" secondItem="ZOo-6C-GBL" secondAttribute="top" id="Wjy-Nf-t47"/>
                         <constraint firstAttribute="trailing" secondItem="U2p-oK-sgY" secondAttribute="trailing" id="hBS-X2-kiG"/>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="320" id="hUx-xJ-tzm"/>
                         <constraint firstItem="REh-DM-uFF" firstAttribute="leading" secondItem="ZOo-6C-GBL" secondAttribute="leading" id="zRh-bu-2WC"/>
                     </constraints>
-                    <variation key="default">
-                        <mask key="constraints">
-                            <exclude reference="6Hf-fj-lR2"/>
-                        </mask>
-                    </variation>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUZ-b3-kNq">
                     <rect key="frame" x="50" y="478.5" width="275" height="55"/>

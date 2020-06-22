@@ -22,6 +22,7 @@
 		20D0710224A0FA6D00165652 /* RST6TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710124A0FA6D00165652 /* RST6TriangleView.m */; };
 		20D0710624A1183E00165652 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710524A1183E00165652 /* UIColor+Additions.m */; };
 		20D0710C24A13A5D00165652 /* RST6RoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710B24A13A5D00165652 /* RST6RoundView.m */; };
+		20D0710F24A1503000165652 /* RST6SquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710E24A1503000165652 /* RST6SquareView.m */; };
 		86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,8 @@
 		20D0710524A1183E00165652 /* UIColor+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Additions.m"; sourceTree = "<group>"; };
 		20D0710A24A13A5D00165652 /* RST6RoundView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6RoundView.h; sourceTree = "<group>"; };
 		20D0710B24A13A5D00165652 /* RST6RoundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6RoundView.m; sourceTree = "<group>"; };
+		20D0710D24A1503000165652 /* RST6SquareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6SquareView.h; sourceTree = "<group>"; };
+		20D0710E24A1503000165652 /* RST6SquareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6SquareView.m; sourceTree = "<group>"; };
 		5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSTask6.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.release.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.release.xcconfig"; sourceTree = "<group>"; };
 		90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.debug.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				20D0710124A0FA6D00165652 /* RST6TriangleView.m */,
 				20D0710A24A13A5D00165652 /* RST6RoundView.h */,
 				20D0710B24A13A5D00165652 /* RST6RoundView.m */,
+				20D0710D24A1503000165652 /* RST6SquareView.h */,
+				20D0710E24A1503000165652 /* RST6SquareView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 				209D4C95249E367800E9AFF3 /* RST6StartView.m in Sources */,
 				209D4C9E249E6D8D00E9AFF3 /* RST6GalleryController.m in Sources */,
 				20D0710224A0FA6D00165652 /* RST6TriangleView.m in Sources */,
+				20D0710F24A1503000165652 /* RST6SquareView.m in Sources */,
 				20AD85B7249D45E800A2CB96 /* AppDelegate.m in Sources */,
 				209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */,
 			);

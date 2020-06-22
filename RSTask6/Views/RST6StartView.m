@@ -16,6 +16,7 @@
 @implementation RST6StartView
 const NSString *RotationAnimation = @"rotationAnimation";
 const NSString *PulseAnimation = @"pulseAnimation";
+const NSString *UpDownAnimation = @"pulseAnimation";
 const NSString *OpacityAnimation = @"opacityAnimation";
 
 -(void)initView{
@@ -31,6 +32,7 @@ const NSString *OpacityAnimation = @"opacityAnimation";
     [self initRotationAnimation];
     [self initOpacityAnimation];
     [self initPulseAnimation];
+    [self initUpDownAnumation];
 }
 
 -(void)initPulseAnimation{
@@ -70,6 +72,21 @@ const NSString *OpacityAnimation = @"opacityAnimation";
     self.opacityAnimation = opacityAnimation;
 }
 
+-(void)initUpDownAnumation{
+    CABasicAnimation *upDownAnimation = [CABasicAnimation animationWithKeyPath:@"position.y"];
+    CGFloat midY = CGRectGetMidY(self.sqrView.frame);
+    CGFloat delta = self.sqrView.frame.size.width * 0.1;
+    upDownAnimation.fromValue = [NSNumber numberWithFloat:midY - delta];
+    upDownAnimation.toValue =   [NSNumber numberWithFloat:midY + delta];
+    
+    upDownAnimation.duration = 0.5;
+    upDownAnimation.repeatCount = HUGE_VALF;
+    upDownAnimation.removedOnCompletion = NO;
+    upDownAnimation.cumulative = NO;
+    upDownAnimation.autoreverses = YES;
+    self.upDownAnimation = upDownAnimation;
+}
+
 -(void)startAnimations{
     if(_isAnimating) return;
     
@@ -81,6 +98,7 @@ const NSString *OpacityAnimation = @"opacityAnimation";
     
     [self startAnimationTriangle];
     [self startAnimationRound];
+    [self startAnimationSquare];
 }
 
 -(void)startAnimationTriangle{
@@ -89,6 +107,10 @@ const NSString *OpacityAnimation = @"opacityAnimation";
 
 -(void)startAnimationRound{
     [self.roundView.layer addAnimation:_pulseAnimation forKey:PulseAnimation];
+}
+
+-(void)startAnimationSquare{
+    [self.sqrView.layer addAnimation:_upDownAnimation forKey:UpDownAnimation];
 }
 
 -(void)addOpacityAnimation:(UIView*)view{
