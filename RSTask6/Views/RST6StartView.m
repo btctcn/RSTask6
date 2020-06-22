@@ -14,8 +14,9 @@
 @end
 
 @implementation RST6StartView
-const NSString *kRotationAnimation = @"rotationAnimation";
-const NSString *kOpacityAnimation = @"opacityAnimation";
+const NSString *RotationAnimation = @"rotationAnimation";
+const NSString *PulseAnimation = @"pulseAnimation";
+const NSString *OpacityAnimation = @"opacityAnimation";
 
 -(void)initView{
     self.roundView.layer.opacity = 0;
@@ -27,20 +28,45 @@ const NSString *kOpacityAnimation = @"opacityAnimation";
 }
 
 -(void)initAnimations{
+    [self initRotationAnimation];
+    [self initOpacityAnimation];
+    [self initPulseAnimation];
+}
+
+-(void)initPulseAnimation{
+    CABasicAnimation *pulseAnimation = [CABasicAnimation animationWithKeyPath:@"transform"];
+    CATransform3D enlarge = CATransform3DIdentity;
+    enlarge = CATransform3DScale(enlarge, 1.1, 1.1, 1);
+    
+    CATransform3D reduce = CATransform3DIdentity;
+    reduce = CATransform3DScale(enlarge, 0.9, 0.9, 1);
+    
+    pulseAnimation.fromValue = [NSValue valueWithCATransform3D:reduce];
+    pulseAnimation.toValue = [NSValue valueWithCATransform3D:enlarge];
+    
+    pulseAnimation.duration = 0.5;
+    pulseAnimation.repeatCount = HUGE_VALF;
+    pulseAnimation.removedOnCompletion = NO;
+    pulseAnimation.cumulative = NO;
+    pulseAnimation.autoreverses = YES;
+    self.pulseAnimation = pulseAnimation;
+}
+
+-(void)initRotationAnimation{
     CABasicAnimation *rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
     rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0];
-    rotationAnimation.duration = 1;
-    rotationAnimation.cumulative = YES;
+    rotationAnimation.duration = 8;
+    rotationAnimation.cumulative = NO;
     rotationAnimation.repeatCount = HUGE_VALF;
     rotationAnimation.removedOnCompletion = NO;
-    
     self.rotationAnimation = rotationAnimation;
-    
+}
+
+-(void)initOpacityAnimation{
     CABasicAnimation* opacityAnimation = [CABasicAnimation animationWithKeyPath:@"opacity"];
     opacityAnimation.fromValue = [NSNumber numberWithFloat:0.0];
     opacityAnimation.toValue = [NSNumber numberWithFloat:1.0];
     opacityAnimation.duration = 1;
-    opacityAnimation.delegate = self;
     self.opacityAnimation = opacityAnimation;
 }
 
@@ -53,13 +79,22 @@ const NSString *kOpacityAnimation = @"opacityAnimation";
     [self addOpacityAnimation:self.sqrView];
     [self addOpacityAnimation:self.triangleView];
     
-    [self.roundView.layer addAnimation:_rotationAnimation forKey:kRotationAnimation];
+    [self startAnimationTriangle];
+    [self startAnimationRound];
+}
+
+-(void)startAnimationTriangle{
+    [self.triangleView.layer addAnimation:_rotationAnimation forKey:RotationAnimation];
+}
+
+-(void)startAnimationRound{
+    [self.roundView.layer addAnimation:_pulseAnimation forKey:PulseAnimation];
 }
 
 -(void)addOpacityAnimation:(UIView*)view{
     CAAnimation *opacityAnimation = [self.opacityAnimation copy];
     opacityAnimation.delegate = view;
-    [view.layer addAnimation:opacityAnimation forKey:kOpacityAnimation];
+    [view.layer addAnimation:opacityAnimation forKey:OpacityAnimation];
 }
 
 -(void)stopAnimations{
@@ -72,10 +107,6 @@ const NSString *kOpacityAnimation = @"opacityAnimation";
     if(_startButtonPressedHandler){
         _startButtonPressedHandler();
     }
-}
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag{
-    NSLog(@"%@", anim);
 }
 
 @end

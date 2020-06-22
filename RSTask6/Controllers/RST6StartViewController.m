@@ -2,7 +2,7 @@
 #import "RST6StartView.h"
 
 @interface RST6StartViewController ()
-typedef void (^tttt)(void);
+typedef void (^completion_handler_t)(void);
 @property (nonatomic) RST6StartView *startView;
 
 @end
@@ -16,7 +16,7 @@ typedef void (^tttt)(void);
 }
 
 -(void)initCompletionHandler{
-    __weak tttt weakCompletionHandler = _completionHandler;
+    __weak completion_handler_t weakCompletionHandler = _completionHandler;
     self.startView.startButtonPressedHandler = ^{
         if(weakCompletionHandler){
             weakCompletionHandler();
