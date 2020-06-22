@@ -1,4 +1,5 @@
 #import "RST6StartView.h"
+#import "UIColor+Additions.h"
 
 @interface RST6StartView ()
 @property (weak, nonatomic) IBOutlet UIButton *startButton;

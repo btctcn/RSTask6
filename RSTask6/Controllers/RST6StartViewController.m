@@ -2,8 +2,9 @@
 #import "RST6StartView.h"
 
 @interface RST6StartViewController ()
+
 typedef void (^completion_handler_t)(void);
-@property (nonatomic) RST6StartView *startView;
+@property (nonatomic, readonly) RST6StartView *startView;
 
 @end
 

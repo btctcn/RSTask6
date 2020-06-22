@@ -23,6 +23,7 @@
 		20D0710624A1183E00165652 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710524A1183E00165652 /* UIColor+Additions.m */; };
 		20D0710C24A13A5D00165652 /* RST6RoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710B24A13A5D00165652 /* RST6RoundView.m */; };
 		20D0710F24A1503000165652 /* RST6SquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710E24A1503000165652 /* RST6SquareView.m */; };
+		20D0711224A15B4900165652 /* RST6HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0711124A15B4900165652 /* RST6HomeController.m */; };
 		86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		20D0710B24A13A5D00165652 /* RST6RoundView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6RoundView.m; sourceTree = "<group>"; };
 		20D0710D24A1503000165652 /* RST6SquareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6SquareView.h; sourceTree = "<group>"; };
 		20D0710E24A1503000165652 /* RST6SquareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6SquareView.m; sourceTree = "<group>"; };
+		20D0711024A15B4900165652 /* RST6HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6HomeController.h; sourceTree = "<group>"; };
+		20D0711124A15B4900165652 /* RST6HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6HomeController.m; sourceTree = "<group>"; };
 		5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSTask6.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.release.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.release.xcconfig"; sourceTree = "<group>"; };
 		90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.debug.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.debug.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +136,8 @@
 				209D4C9A249E6D4300E9AFF3 /* RST6InfoController.m */,
 				209D4C9C249E6D8D00E9AFF3 /* RST6GalleryController.h */,
 				209D4C9D249E6D8D00E9AFF3 /* RST6GalleryController.m */,
+				20D0711024A15B4900165652 /* RST6HomeController.h */,
+				20D0711124A15B4900165652 /* RST6HomeController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20D0711224A15B4900165652 /* RST6HomeController.m in Sources */,
 				20D0710C24A13A5D00165652 /* RST6RoundView.m in Sources */,
 				209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */,
 				20D070FF24A0F73500165652 /* RST6AnimatedView.m in Sources */,
