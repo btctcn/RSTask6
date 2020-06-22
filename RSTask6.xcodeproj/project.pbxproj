@@ -18,6 +18,7 @@
 		20AD85C5249D45F100A2CB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AD85C4249D45F100A2CB96 /* Assets.xcassets */; };
 		20AD85CB249D45F100A2CB96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AD85CA249D45F100A2CB96 /* main.m */; };
 		20AD85D2249D565A00A2CB96 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */; };
+		20D070FF24A0F73500165652 /* RST6AnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D070FE24A0F73500165652 /* RST6AnimatedView.m */; };
 		86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,8 @@
 		20AD85C9249D45F100A2CB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20AD85CA249D45F100A2CB96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		20D070FD24A0F73500165652 /* RST6AnimatedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6AnimatedView.h; sourceTree = "<group>"; };
+		20D070FE24A0F73500165652 /* RST6AnimatedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6AnimatedView.m; sourceTree = "<group>"; };
 		5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSTask6.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.release.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.release.xcconfig"; sourceTree = "<group>"; };
 		90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.debug.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.debug.xcconfig"; sourceTree = "<group>"; };
@@ -59,6 +62,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		208F161C24A0C3AF00D996AB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				209D4C93249E367800E9AFF3 /* RST6StartView.h */,
+				209D4C94249E367800E9AFF3 /* RST6StartView.m */,
+				20D070FD24A0F73500165652 /* RST6AnimatedView.h */,
+				20D070FE24A0F73500165652 /* RST6AnimatedView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		209D4C9F249E6E0500E9AFF3 /* Additions */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +109,6 @@
 				209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */,
 				209D4C8E249D6CA900E9AFF3 /* RST6TabBarController.h */,
 				209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */,
-				209D4C93249E367800E9AFF3 /* RST6StartView.h */,
-				209D4C94249E367800E9AFF3 /* RST6StartView.m */,
 				209D4C99249E6D4300E9AFF3 /* RST6InfoController.h */,
 				209D4C9A249E6D4300E9AFF3 /* RST6InfoController.m */,
 				209D4C9C249E6D8D00E9AFF3 /* RST6GalleryController.h */,
@@ -126,6 +138,7 @@
 		20AD85B4249D45E800A2CB96 /* RSTask6 */ = {
 			isa = PBXGroup;
 			children = (
+				208F161C24A0C3AF00D996AB /* Views */,
 				20AD85C9249D45F100A2CB96 /* Info.plist */,
 				209D4CA2249E6E8700E9AFF3 /* Controllers */,
 				209D4CA1249E6E7700E9AFF3 /* Main */,
@@ -267,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */,
+				20D070FF24A0F73500165652 /* RST6AnimatedView.m in Sources */,
 				20AD85CB249D45F100A2CB96 /* main.m in Sources */,
 				209D4C98249E64D800E9AFF3 /* UIWindow+Additions.m in Sources */,
 				209D4C9B249E6D4300E9AFF3 /* RST6InfoController.m in Sources */,

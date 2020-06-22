@@ -1,24 +1,43 @@
 #import "RST6StartViewController.h"
 #import "RST6StartView.h"
 
+@interface RST6StartViewController ()
+typedef void (^tttt)(void);
+@property (nonatomic) RST6StartView *startView;
+
+@end
+
 @implementation RST6StartViewController
 
 -(void)viewDidLoad{
     [super viewDidLoad];
-    [[self viewAsRST6StartView].startButton addTarget:self  action:@selector(startButtonTouched:) forControlEvents:UIControlEventTouchUpInside];
+    [self initCompletionHandler];
+    [self.startView initView];
 }
 
--(void) startButtonTouched:(UIButton *)sender{
-    if(_completionHandler){
-        _completionHandler();
-    }
+-(void)initCompletionHandler{
+    __weak tttt weakCompletionHandler = _completionHandler;
+    self.startView.startButtonPressedHandler = ^{
+        if(weakCompletionHandler){
+            weakCompletionHandler();
+        }
+    };
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    [self.startView startAnimations];
+}
+
+-(void) viewDidDisappear:(BOOL)animated{
+    [self.startView stopAnimations];
 }
 
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
 
--(RST6StartView *)viewAsRST6StartView{
+-(RST6StartView *)startView{
     return (RST6StartView*)self.view;
 }
 

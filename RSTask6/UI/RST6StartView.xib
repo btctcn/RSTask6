@@ -23,10 +23,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZOo-6C-GBL" userLabel="ContainerView">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOo-6C-GBL" userLabel="ContainerView">
                     <rect key="frame" x="37.5" y="230" width="300" height="70"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="REh-DM-uFF" userLabel="roundView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="REh-DM-uFF" userLabel="roundView" customClass="RST6AnimatedView">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -34,7 +34,7 @@
                                 <constraint firstAttribute="width" constant="70" id="WTq-yw-CLF"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-qY-ilh" userLabel="sqrView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIm-qY-ilh" userLabel="sqrView" customClass="RST6AnimatedView">
                             <rect key="frame" x="115" y="0.0" width="70" height="70"/>
                             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -42,7 +42,7 @@
                                 <constraint firstAttribute="height" constant="70" id="zo9-1S-ztu"/>
                             </constraints>
                         </view>
-                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U2p-oK-sgY" userLabel="triangleView">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2p-oK-sgY" userLabel="triangleView" customClass="RST6AnimatedView">
                             <rect key="frame" x="230" y="0.0" width="70" height="70"/>
                             <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -94,7 +94,10 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
+                <outlet property="roundView" destination="REh-DM-uFF" id="Sa3-FB-48G"/>
+                <outlet property="sqrView" destination="DIm-qY-ilh" id="K7H-kw-Hw4"/>
                 <outlet property="startButton" destination="QUZ-b3-kNq" id="Duw-WA-h23"/>
+                <outlet property="triangleView" destination="U2p-oK-sgY" id="Ip2-Bp-LY2"/>
             </connections>
             <point key="canvasLocation" x="139" y="153"/>
         </view>
