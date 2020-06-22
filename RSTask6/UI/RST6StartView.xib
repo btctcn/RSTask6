@@ -18,13 +18,13 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you ready?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jT3-TM-gOT">
-                    <rect key="frame" x="108" y="104.5" width="159" height="29"/>
+                    <rect key="frame" x="108" y="113.5" width="159" height="29"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOo-6C-GBL" userLabel="ContainerView">
-                    <rect key="frame" x="37.5" y="230" width="300" height="70"/>
+                    <rect key="frame" x="37.5" y="265" width="300" height="70"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="REh-DM-uFF" userLabel="roundView" customClass="RST6RoundView">
                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -64,7 +64,7 @@
                     </constraints>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QUZ-b3-kNq">
-                    <rect key="frame" x="50" y="478.5" width="275" height="55"/>
+                    <rect key="frame" x="50" y="498.5" width="275" height="55"/>
                     <color key="backgroundColor" red="0.97647058823529409" green="0.80000000000000004" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="275" id="M6n-UU-M6B"/>
@@ -85,10 +85,10 @@
             <constraints>
                 <constraint firstItem="ZOo-6C-GBL" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" multiplier="0.9" priority="999" id="6t3-SP-g2F" userLabel="ContainerView_Trailing"/>
                 <constraint firstItem="jT3-TM-gOT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="9Fr-fq-Pjw" userLabel="Label_Center_X"/>
-                <constraint firstItem="ZOo-6C-GBL" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" multiplier="0.45" id="GTs-O3-t37"/>
+                <constraint firstItem="ZOo-6C-GBL" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="bottom" multiplier="0.45" id="GTs-O3-t37"/>
                 <constraint firstItem="ZOo-6C-GBL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="trailing" multiplier="0.1" priority="999" id="RCo-rc-Ibg" userLabel="ContainerView_Leading"/>
-                <constraint firstItem="QUZ-b3-kNq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" multiplier="0.8" id="YuZ-oi-1LU"/>
-                <constraint firstItem="jT3-TM-gOT" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" multiplier="0.2" id="bDU-nG-fPC"/>
+                <constraint firstItem="QUZ-b3-kNq" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" multiplier="0.83" id="YuZ-oi-1LU"/>
+                <constraint firstItem="jT3-TM-gOT" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="bottom" multiplier="0.17" id="bDU-nG-fPC"/>
                 <constraint firstItem="ZOo-6C-GBL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="iUq-rq-i3M" userLabel="ContainerView_Center_X"/>
                 <constraint firstItem="QUZ-b3-kNq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="nr0-dD-Xcd"/>
             </constraints>
