@@ -4,8 +4,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RST6StartView : UIView 
 -(void)initView;
--(void)startAnimations;
--(void)stopAnimations;
 @property(nonatomic, copy) void (^startButtonPressedHandler)(void);
 @end
 

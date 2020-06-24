@@ -30,6 +30,7 @@
 -(void)setupContraints{
     BOOL isPortrait = UIApplication.sharedApplication.isPortraitOrientation;
     [self.label2CenterXContraint setActive:!isPortrait];
+    [self.label2CenterYConstraint setActive:isPortrait];
 }
 
 - (void)statusBarOrientationChanged:(NSNotification *)notification{

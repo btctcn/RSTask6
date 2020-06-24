@@ -25,15 +25,6 @@ typedef void (^completion_handler_t)(void);
     };
 }
 
--(void)viewWillAppear:(BOOL)animated{
-    
-    [self.startView startAnimations];
-}
-
--(void) viewDidDisappear:(BOOL)animated{
-    [self.startView stopAnimations];
-}
-
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }

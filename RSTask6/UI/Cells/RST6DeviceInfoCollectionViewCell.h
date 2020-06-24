@@ -8,6 +8,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *deviceNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *deviceIdiomLabel;
 @property (weak, nonatomic) IBOutlet UILabel *osVersionLabel;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *label2CenterYConstraint;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *label2TopConstraint;
 
 @end
 
