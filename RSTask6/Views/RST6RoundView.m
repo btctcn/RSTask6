@@ -2,7 +2,6 @@
 #import "UIColor+Additions.h"
 
 static const unsigned int color = 0xEE686A;
-static const unsigned int width = 70;
 
 @interface RST6RoundView ()
 

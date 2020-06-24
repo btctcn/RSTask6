@@ -30,6 +30,8 @@
     self.viewControllers = @[self.tab1NavigationController,
                              self.tab2NavigationController,
                              self.tab3NavigationController];
+    
+    self.selectedIndex = 1;
 }
 
 - (BOOL)prefersStatusBarHidden {

@@ -49,7 +49,6 @@
             break;
     }
     
-    cell.backgroundColor=[UIColor greenColor];
     return cell;
 }
 
@@ -70,7 +69,7 @@
     BOOL isVertical = UIApplication.sharedApplication.isPortraitOrientation;
     CGFloat width = isVertical ? collectionView.bounds.size.width/3.3 : collectionView.bounds.size.width;
     CGFloat height = isVertical ? collectionView.bounds.size.height : collectionView.bounds.size.height/3.1;
-    return CGSizeMake(width, height);
+    return CGSizeMake(width, height + 20);
 }
 
 -(CGSize) getSizeForDeviceInfo:(UICollectionView*)collectionView{

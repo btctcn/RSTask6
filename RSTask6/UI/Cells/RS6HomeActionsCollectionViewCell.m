@@ -1,12 +1,5 @@
-//
-//  RS6HomeActionsCollectionViewCell.m
-//  RSTask6
-//
-//  Created by Andrey Butcitcyn on 24.06.2020.
-//  Copyright © 2020 Andrey Butcitcyn. All rights reserved.
-//
-
 #import "RS6HomeActionsCollectionViewCell.h"
+#import "Constants.h"
 
 @implementation RS6HomeActionsCollectionViewCell
 
@@ -15,4 +8,11 @@
     // Initialization code
 }
 
+- (IBAction)goToStartRequested:(id)sender {
+    [NSNotificationCenter.defaultCenter postNotificationName:GoToStartRequested object:nil userInfo:nil];
+}
+
+- (IBAction)openCVRequested:(id)sender {
+    [NSNotificationCenter.defaultCenter postNotificationName:OpenCVRequested object:nil userInfo:nil];
+}
 @end

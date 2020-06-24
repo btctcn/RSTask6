@@ -31,6 +31,9 @@
                                 <integer key="value" value="27"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="openCVRequested:" destination="gTV-IL-0wX" eventType="touchUpInside" id="N8P-Aa-8aw"/>
+                        </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8iR-ft-tAm">
                         <rect key="frame" x="0.0" y="192.5" width="502" height="1"/>
@@ -53,6 +56,9 @@
                                 <integer key="value" value="27"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="goToStartRequested:" destination="gTV-IL-0wX" eventType="touchUpInside" id="ZJq-tZ-nyp"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

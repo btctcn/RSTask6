@@ -42,7 +42,6 @@ typedef NS_ENUM(NSInteger, ShapeType) {
 {
     UICollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"shapeCell" forIndexPath:indexPath];
     [self initCell:cell shapetype:(ShapeType)indexPath.row];
-    cell.backgroundColor = UIColor.greenColor;
     return cell;
 }
 

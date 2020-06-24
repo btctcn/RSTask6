@@ -2,7 +2,6 @@
 #import "UIColor+Additions.h"
 
 static const unsigned int color = 0x34C1A1;
-static const unsigned int width = 70;
 
 @interface RST6TriangleView ()
 

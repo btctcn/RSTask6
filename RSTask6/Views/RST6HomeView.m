@@ -44,7 +44,6 @@
             break;
     }
     
-    cell.backgroundColor=[UIColor greenColor];
     return cell;
 }
 
