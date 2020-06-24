@@ -57,14 +57,16 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="wql-ur-A5T" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" multiplier="0.85" constant="35" id="11n-K9-5DQ"/>
+                <constraint firstItem="wql-ur-A5T" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="trailing" multiplier="0.85" priority="999" constant="35" id="11n-K9-5DQ"/>
                 <constraint firstAttribute="trailing" secondItem="8iR-ft-tAm" secondAttribute="trailing" id="8Mh-Q1-hmS"/>
-                <constraint firstItem="wql-ur-A5T" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="trailing" multiplier="0.15" constant="-35" id="9qf-nA-4qC"/>
+                <constraint firstItem="wql-ur-A5T" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="trailing" multiplier="0.15" priority="999" constant="-35" id="9qf-nA-4qC"/>
                 <constraint firstItem="8iR-ft-tAm" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="CZs-fk-XQD"/>
+                <constraint firstItem="wql-ur-A5T" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="leading" id="FPS-0q-btB"/>
                 <constraint firstItem="WgC-IW-9wT" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Tcx-Cx-vtc"/>
                 <constraint firstItem="wql-ur-A5T" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="UQJ-HK-Jk9"/>
                 <constraint firstItem="WgC-IW-9wT" firstAttribute="trailing" secondItem="wql-ur-A5T" secondAttribute="trailing" id="VeP-y9-xQV"/>
                 <constraint firstItem="8iR-ft-tAm" firstAttribute="top" secondItem="wql-ur-A5T" secondAttribute="bottom" constant="2.5" id="ZmF-TQ-jQi"/>
+                <constraint firstItem="wql-ur-A5T" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="gTV-IL-0wX" secondAttribute="trailing" id="cd0-3U-dmx"/>
                 <constraint firstItem="WgC-IW-9wT" firstAttribute="top" secondItem="8iR-ft-tAm" secondAttribute="bottom" constant="3.5" id="eSi-vS-zop"/>
                 <constraint firstItem="8iR-ft-tAm" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="jfe-CI-O5V"/>
                 <constraint firstItem="WgC-IW-9wT" firstAttribute="leading" secondItem="wql-ur-A5T" secondAttribute="leading" id="juv-gm-sd1"/>
