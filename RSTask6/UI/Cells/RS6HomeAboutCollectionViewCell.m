@@ -47,15 +47,6 @@
             break;
         default:
             break;
-            
-            //        case 0:
-            //            cell = _appleLogoView;
-            //            break;
-            //        case 1:
-            //            cell = _deviceInfoView;
-            //            break;
-            //        default:
-            //            break;
     }
     
     cell.backgroundColor=[UIColor greenColor];
@@ -64,9 +55,28 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    switch (indexPath.row) {
+        case 0:
+            return [self getSizeForAppleLogo:collectionView];
+            break;
+        case 1:
+            return [self getSizeForDeviceInfo:collectionView];
+            break;
+    }
+    return CGSizeZero;
+}
+
+-(CGSize) getSizeForAppleLogo:(UICollectionView*)collectionView{
     BOOL isVertical = UIApplication.sharedApplication.isPortraitOrientation;
-    CGFloat width = !isVertical ? collectionView.bounds.size.width : collectionView.bounds.size.width/2.1;
-    CGFloat height = !isVertical ? collectionView.bounds.size.height/2.1 : collectionView.bounds.size.height;
+    CGFloat width = isVertical ? collectionView.bounds.size.width/3.3 : collectionView.bounds.size.width;
+    CGFloat height = isVertical ? collectionView.bounds.size.height : collectionView.bounds.size.height/3.1;
+    return CGSizeMake(width, height);
+}
+
+-(CGSize) getSizeForDeviceInfo:(UICollectionView*)collectionView{
+    BOOL isVertical = UIApplication.sharedApplication.isPortraitOrientation;
+    CGFloat width = isVertical ? collectionView.bounds.size.width*2/3 : collectionView.bounds.size.width;
+    CGFloat height = isVertical ? collectionView.bounds.size.height : collectionView.bounds.size.height*2/3;
     return CGSizeMake(width, height);
 }
 

@@ -12,9 +12,9 @@
 }
 
 -(void)setupContraints{
-    BOOL isPortrait = UIApplication.sharedApplication.isPortraitOrientation;
+    //BOOL isPortrait = UIApplication.sharedApplication.isPortraitOrientation;
     //[self.logoTrailingConstraint setActive:!isPortrait];
-    [self.logoCenterXContraint setActive:!isPortrait];
+    //[self.logoCenterXContraint setActive:!isPortrait];
     
 }
 
