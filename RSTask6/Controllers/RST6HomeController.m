@@ -1,4 +1,12 @@
 #import "RST6HomeController.h"
+#import "RST6HomeView.h"
+
+@interface RST6HomeController ()
+
+@property (nonatomic, readonly) RST6HomeView *homeView;
+
+@end
+
 
 @implementation RST6HomeController
 
@@ -16,6 +24,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+   self.view = [NSBundle.mainBundle loadNibNamed:@"RST6HomeView" owner:nil options:nil][0];
+    [[self homeView] completeInit];
+}
+
+-(RST6HomeView *)homeView{
+    return (RST6HomeView*)self.view;
 }
 
 @end

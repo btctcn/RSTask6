@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="gTV-IL-0wX" customClass="RST6DeviceInfoCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="405" height="410"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="405" height="410"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dsdsdfsdfsdfasasdasdasdasdsdfsdfsdfsdfsdfs" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGL-Kt-alq" userLabel="label1">
+                        <rect key="frame" x="160.5" y="139.5" width="228.5" height="41"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdfsdfsdfsdfsdfsdsdfsd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-d2-69J" userLabel="label2">
+                        <rect key="frame" x="160.5" y="194.5" width="228.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sdfsdfsdfsdsdfsdfsdasdasdasasdasdas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKn-i0-Mc3" userLabel="label3">
+                        <rect key="frame" x="160.5" y="229.5" width="228.5" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="jKn-i0-Mc3" firstAttribute="leading" secondItem="aQd-d2-69J" secondAttribute="leading" id="8fV-DU-8ST"/>
+                <constraint firstItem="SGL-Kt-alq" firstAttribute="leading" secondItem="aQd-d2-69J" secondAttribute="leading" id="FGQ-ZT-IXd"/>
+                <constraint firstItem="aQd-d2-69J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" priority="999" id="Vin-hh-bG7" userLabel="label2Leading"/>
+                <constraint firstItem="aQd-d2-69J" firstAttribute="top" secondItem="SGL-Kt-alq" secondAttribute="bottom" constant="14" id="XNy-4k-0b5"/>
+                <constraint firstAttribute="trailing" secondItem="aQd-d2-69J" secondAttribute="trailing" constant="16" id="Zuc-yS-4CL"/>
+                <constraint firstItem="jKn-i0-Mc3" firstAttribute="top" secondItem="aQd-d2-69J" secondAttribute="bottom" constant="14" id="agW-7i-frI"/>
+                <constraint firstItem="aQd-d2-69J" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="hWu-Iv-tDQ"/>
+                <constraint firstAttribute="trailing" secondItem="jKn-i0-Mc3" secondAttribute="trailing" constant="16" id="iPV-Cb-DxM"/>
+                <constraint firstAttribute="trailing" secondItem="SGL-Kt-alq" secondAttribute="trailing" constant="16" id="lus-Fd-661"/>
+                <constraint firstItem="aQd-d2-69J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-42" id="wXd-LR-kK1" userLabel="label2Center"/>
+            </constraints>
+            <size key="customSize" width="405" height="410"/>
+            <connections>
+                <outlet property="deviceIdiomLabel" destination="aQd-d2-69J" id="7dM-xg-LOi"/>
+                <outlet property="deviceNameLabel" destination="SGL-Kt-alq" id="7QJ-n4-VLy"/>
+                <outlet property="label2CenterXContraint" destination="wXd-LR-kK1" id="fBK-gg-5cq"/>
+                <outlet property="label2LeadingConstraint" destination="Vin-hh-bG7" id="3hK-TF-0I3"/>
+                <outlet property="osVersionLabel" destination="jKn-i0-Mc3" id="4Tn-Yz-hn6"/>
+            </connections>
+            <point key="canvasLocation" x="218.11594202898553" y="122.54464285714285"/>
+        </collectionViewCell>
+    </objects>
+</document>

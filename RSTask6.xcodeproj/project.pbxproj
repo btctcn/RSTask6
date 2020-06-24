@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2016F62424A292BF00EB1C21 /* RST6HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2016F62324A292BF00EB1C21 /* RST6HomeView.m */; };
+		2016F62624A2931700EB1C21 /* RST6HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2016F62524A2931700EB1C21 /* RST6HomeView.xib */; };
+		206B5EF124A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5EEF24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m */; };
+		206B5EF224A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5EF024A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib */; };
+		206B5EF624A370F500D91375 /* RS6HomeShapeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5EF424A370F500D91375 /* RS6HomeShapeCollectionViewCell.m */; };
+		206B5EF724A370F500D91375 /* RS6HomeShapeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5EF524A370F500D91375 /* RS6HomeShapeCollectionViewCell.xib */; };
+		206B5EFB24A3711200D91375 /* RS6HomeActionsCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5EF924A3711200D91375 /* RS6HomeActionsCollectionViewCell.m */; };
+		206B5EFC24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5EFA24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib */; };
+		206B5F0024A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5EFE24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.m */; };
+		206B5F0124A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5EFF24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib */; };
+		206B5F0524A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F0324A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m */; };
+		206B5F0624A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5F0424A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib */; };
+		206B5F0C24A384D700D91375 /* UIApplication+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F0B24A384D700D91375 /* UIApplication+Additions.m */; };
 		209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */; };
 		209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */; };
 		209D4C92249D751C00E9AFF3 /* RST6StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209D4C91249D751C00E9AFF3 /* RST6StartView.xib */; };
@@ -28,6 +41,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2016F62224A292BF00EB1C21 /* RST6HomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6HomeView.h; sourceTree = "<group>"; };
+		2016F62324A292BF00EB1C21 /* RST6HomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6HomeView.m; sourceTree = "<group>"; };
+		2016F62524A2931700EB1C21 /* RST6HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RST6HomeView.xib; sourceTree = "<group>"; };
+		206B5EEE24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RS6HomeAboutCollectionViewCell.h; sourceTree = "<group>"; };
+		206B5EEF24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RS6HomeAboutCollectionViewCell.m; sourceTree = "<group>"; };
+		206B5EF024A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RS6HomeAboutCollectionViewCell.xib; sourceTree = "<group>"; };
+		206B5EF324A370F500D91375 /* RS6HomeShapeCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RS6HomeShapeCollectionViewCell.h; sourceTree = "<group>"; };
+		206B5EF424A370F500D91375 /* RS6HomeShapeCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RS6HomeShapeCollectionViewCell.m; sourceTree = "<group>"; };
+		206B5EF524A370F500D91375 /* RS6HomeShapeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RS6HomeShapeCollectionViewCell.xib; sourceTree = "<group>"; };
+		206B5EF824A3711200D91375 /* RS6HomeActionsCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RS6HomeActionsCollectionViewCell.h; sourceTree = "<group>"; };
+		206B5EF924A3711200D91375 /* RS6HomeActionsCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RS6HomeActionsCollectionViewCell.m; sourceTree = "<group>"; };
+		206B5EFA24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RS6HomeActionsCollectionViewCell.xib; sourceTree = "<group>"; };
+		206B5EFD24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6AppleLogoCollectionViewCell.h; sourceTree = "<group>"; };
+		206B5EFE24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6AppleLogoCollectionViewCell.m; sourceTree = "<group>"; };
+		206B5EFF24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RST6AppleLogoCollectionViewCell.xib; sourceTree = "<group>"; };
+		206B5F0224A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6DeviceInfoCollectionViewCell.h; sourceTree = "<group>"; };
+		206B5F0324A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6DeviceInfoCollectionViewCell.m; sourceTree = "<group>"; };
+		206B5F0424A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RST6DeviceInfoCollectionViewCell.xib; sourceTree = "<group>"; };
+		206B5F0A24A384D700D91375 /* UIApplication+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Additions.h"; sourceTree = "<group>"; };
+		206B5F0B24A384D700D91375 /* UIApplication+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Additions.m"; sourceTree = "<group>"; };
 		209D4C88249D6C4300E9AFF3 /* RST6StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6StartViewController.h; sourceTree = "<group>"; };
 		209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6StartViewController.m; sourceTree = "<group>"; };
 		209D4C8E249D6CA900E9AFF3 /* RST6TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6TabBarController.h; sourceTree = "<group>"; };
@@ -77,6 +110,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		206B5EE724A362E400D91375 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				206B5EEE24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.h */,
+				206B5EEF24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m */,
+				206B5EF324A370F500D91375 /* RS6HomeShapeCollectionViewCell.h */,
+				206B5EF424A370F500D91375 /* RS6HomeShapeCollectionViewCell.m */,
+				206B5EF824A3711200D91375 /* RS6HomeActionsCollectionViewCell.h */,
+				206B5EF924A3711200D91375 /* RS6HomeActionsCollectionViewCell.m */,
+				206B5EFD24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.h */,
+				206B5EFE24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.m */,
+				206B5F0224A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.h */,
+				206B5F0324A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		208F161C24A0C3AF00D996AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +140,8 @@
 				20D0710B24A13A5D00165652 /* RST6RoundView.m */,
 				20D0710D24A1503000165652 /* RST6SquareView.h */,
 				20D0710E24A1503000165652 /* RST6SquareView.m */,
+				2016F62224A292BF00EB1C21 /* RST6HomeView.h */,
+				2016F62324A292BF00EB1C21 /* RST6HomeView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -101,6 +153,8 @@
 				20D0710524A1183E00165652 /* UIColor+Additions.m */,
 				209D4C96249E64D800E9AFF3 /* UIWindow+Additions.h */,
 				209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */,
+				206B5F0A24A384D700D91375 /* UIApplication+Additions.h */,
+				206B5F0B24A384D700D91375 /* UIApplication+Additions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -108,9 +162,16 @@
 		209D4CA0249E6E5300E9AFF3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				206B5EE724A362E400D91375 /* Cells */,
 				20AD85C4249D45F100A2CB96 /* Assets.xcassets */,
 				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
 				209D4C91249D751C00E9AFF3 /* RST6StartView.xib */,
+				2016F62524A2931700EB1C21 /* RST6HomeView.xib */,
+				206B5EF024A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib */,
+				206B5EF524A370F500D91375 /* RS6HomeShapeCollectionViewCell.xib */,
+				206B5EFA24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib */,
+				206B5EFF24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib */,
+				206B5F0424A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -257,8 +318,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2016F62624A2931700EB1C21 /* RST6HomeView.xib in Resources */,
+				206B5EF724A370F500D91375 /* RS6HomeShapeCollectionViewCell.xib in Resources */,
 				20AD85D2249D565A00A2CB96 /* Launch Screen.storyboard in Resources */,
 				209D4C92249D751C00E9AFF3 /* RST6StartView.xib in Resources */,
+				206B5F0624A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib in Resources */,
+				206B5EFC24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib in Resources */,
+				206B5F0124A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib in Resources */,
+				206B5EF224A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib in Resources */,
 				20AD85C5249D45F100A2CB96 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,20 +379,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206B5EF124A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m in Sources */,
+				206B5EFB24A3711200D91375 /* RS6HomeActionsCollectionViewCell.m in Sources */,
 				20D0711224A15B4900165652 /* RST6HomeController.m in Sources */,
 				20D0710C24A13A5D00165652 /* RST6RoundView.m in Sources */,
 				209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */,
 				20D070FF24A0F73500165652 /* RST6AnimatedView.m in Sources */,
 				20D0710624A1183E00165652 /* UIColor+Additions.m in Sources */,
 				20AD85CB249D45F100A2CB96 /* main.m in Sources */,
+				206B5F0C24A384D700D91375 /* UIApplication+Additions.m in Sources */,
+				206B5EF624A370F500D91375 /* RS6HomeShapeCollectionViewCell.m in Sources */,
 				209D4C98249E64D800E9AFF3 /* UIWindow+Additions.m in Sources */,
 				209D4C9B249E6D4300E9AFF3 /* RST6InfoController.m in Sources */,
 				209D4C95249E367800E9AFF3 /* RST6StartView.m in Sources */,
 				209D4C9E249E6D8D00E9AFF3 /* RST6GalleryController.m in Sources */,
+				2016F62424A292BF00EB1C21 /* RST6HomeView.m in Sources */,
 				20D0710224A0FA6D00165652 /* RST6TriangleView.m in Sources */,
 				20D0710F24A1503000165652 /* RST6SquareView.m in Sources */,
+				206B5F0024A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.m in Sources */,
 				20AD85B7249D45E800A2CB96 /* AppDelegate.m in Sources */,
 				209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */,
+				206B5F0524A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

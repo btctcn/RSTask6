@@ -19,9 +19,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.infoController = [[RST6InfoController alloc] init];
-    self.galleryController = [[RST6GalleryController alloc] init];
-    self.homeController = [[RST6HomeController alloc] init];
+    self.infoController    = [RST6InfoController new];
+    self.galleryController = [RST6GalleryController new];
+    self.homeController    = [RST6HomeController new];
     
     self.tab1NavigationController = [[UINavigationController alloc]initWithRootViewController:self.infoController];
     self.tab2NavigationController = [[UINavigationController alloc]initWithRootViewController:self.galleryController];
