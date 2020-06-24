@@ -83,9 +83,18 @@ typedef NS_ENUM(NSInteger, ShapeType) {
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    CGFloat heightDelta = 0;
+    if(indexPath.row == 1){
+        heightDelta = -30;
+    }
+    
+    if(indexPath.row == 2){
+        heightDelta = 30;
+    }
     BOOL isVertical = UIApplication.sharedApplication.isPortraitOrientation;
     CGFloat width = isVertical ? collectionView.bounds.size.width/3.3 : collectionView.bounds.size.width;
-    CGFloat height = isVertical ? collectionView.bounds.size.height : collectionView.bounds.size.height/3.1;
+    CGFloat height = isVertical ? collectionView.bounds.size.height : collectionView.bounds.size.height/3.1 + heightDelta;
+    
     return CGSizeMake(width, height);
 }
 

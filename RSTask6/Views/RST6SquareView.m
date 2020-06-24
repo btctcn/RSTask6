@@ -53,6 +53,7 @@ const NSString *UpDownAnimation = @"upDownAnimation";
     upDownAnimation.autoreverses = YES;
     upDownAnimation.duration = 0.5;
     upDownAnimation.repeatCount = INFINITY;
+    upDownAnimation.removedOnCompletion = NO;
     self.upDownAnimation = upDownAnimation;
 }
 

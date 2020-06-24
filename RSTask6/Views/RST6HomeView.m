@@ -11,6 +11,15 @@
     [_collectionView registerNib:[UINib nibWithNibName:@"RS6HomeAboutCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"about"];
     [_collectionView registerNib:[UINib nibWithNibName:@"RS6HomeShapeCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"shape"];
     [_collectionView registerNib:[UINib nibWithNibName:@"RS6HomeActionsCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"actions"];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(statusBarOrientationChanged:)
+                                                 name:UIApplicationDidChangeStatusBarOrientationNotification
+                                               object:nil];
+}
+
+- (void)statusBarOrientationChanged:(NSNotification *)notification{
+    [_collectionView.collectionViewLayout invalidateLayout];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
