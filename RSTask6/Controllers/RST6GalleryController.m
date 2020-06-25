@@ -45,7 +45,19 @@
     self.galleryView.collectionView.dataSource = self;
     self.galleryView.collectionView.delegate = self;
     [self.galleryView.collectionView registerNib:[UINib nibWithNibName:@"RST6GalleryCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
-    [self.photoSource initPhotoSource];
+    
+    __weak typeof(self) welf = self;
+    [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
+        if (status == PHAuthorizationStatusAuthorized) {
+            [PHPhotoLibrary.sharedPhotoLibrary registerChangeObserver:welf];
+            [welf.photoSource initPhotoSource];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                [welf.galleryView.collectionView.collectionViewLayout invalidateLayout];
+                [welf.galleryView.collectionView reloadData];
+            });
+        }
+    }];
+    
     [self resetCachedAssets];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -66,10 +78,20 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
     [self updateCachedAssets];
 }
 
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!decelerate) {
+        [self updateCachedAssets];
+    }
+}
+
 -(void)updateCachedAssets{
+    [self.imageManager stopCachingImagesForAllAssets];
     CGRect visibleRect = CGRectMake(self.galleryView.collectionView.contentOffset.x, self.galleryView.collectionView.contentOffset.y, self.galleryView.collectionView.bounds.size.width, self.galleryView.collectionView.bounds.size.width);
     NSMutableArray *fetchResultsForVisibleCells = [NSMutableArray new];
     

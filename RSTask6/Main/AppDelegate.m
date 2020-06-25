@@ -71,6 +71,7 @@
 
 -(void)initPhotoSource{
     if(self.fetchResult) return;
+    
     PHFetchOptions *fetchOptions = [PHFetchOptions new];
     fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     self.fetchResult = [PHAsset fetchAssetsWithOptions:fetchOptions];
