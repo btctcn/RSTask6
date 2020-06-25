@@ -5,6 +5,8 @@
 #import "UIColor+Additions.h"
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import <Photos/Photos.h>
+
 
 @interface AppDelegate ()
 
@@ -27,7 +29,7 @@
     __weak UIWindow *weakWindow = self.window;
     __weak AppDelegate *weakSelf = self;
     self.startController.completionHandler = ^{
-        weakSelf.tabController = [RST6TabBarController new];
+        weakSelf.tabController = [[RST6TabBarController alloc] initWithDataSource:weakSelf];
         [weakWindow setRootViewController:weakSelf.tabController animated:YES];
     };
     self.window.rootViewController = self.startController;
@@ -65,5 +67,15 @@
     if([UIApplication.sharedApplication canOpenURL:cvUrl]){
         [UIApplication.sharedApplication openURL:cvUrl options:@{} completionHandler:nil];
     }
+}
+
+-(void)initPhotoSource{
+    if(self.fetchResult) return;
+    PHFetchOptions *fetchOptions = [PHFetchOptions new];
+    fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
+    self.fetchResult = [PHAsset fetchAssetsWithOptions:fetchOptions];
+}
+-(NSUInteger)count{
+    return [self.fetchResult count];
 }
 @end

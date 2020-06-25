@@ -1,8 +1,12 @@
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
+#import <Photos/Photos.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RST6GalleryController : UIViewController
+@interface RST6GalleryController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, PHPhotoLibraryChangeObserver>
+
+- (instancetype)initWithDataSource:(id<PhotoDataSource>)photoSource;
 
 @end
 

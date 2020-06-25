@@ -3,6 +3,7 @@
 #import "RST6HomeController.h"
 #import "RST6GalleryController.h"
 
+
 @interface RST6TabBarController ()
 @property (nonatomic, strong) RST6InfoController    *infoController;
 @property (nonatomic, strong) RST6GalleryController *galleryController;
@@ -12,15 +13,22 @@
 @property (nonatomic, strong) UINavigationController *tab2NavigationController;
 @property (nonatomic, strong) UINavigationController *tab3NavigationController;
 
+@property (nonatomic, weak) id<PhotoDataSource> photoSource;
+
 @end
 
 @implementation RST6TabBarController
 
+- (instancetype)initWithDataSource:(id<PhotoDataSource>)photoSource{
+    _photoSource = photoSource;
+    return [super init];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.infoController    = [RST6InfoController new];
-    self.galleryController = [RST6GalleryController new];
+    self.infoController    = [[RST6InfoController alloc] initWithDataSource:_photoSource];
+    self.galleryController = [[RST6GalleryController alloc] initWithDataSource:_photoSource];
     self.homeController    = [RST6HomeController new];
     
     self.tab1NavigationController = [[UINavigationController alloc]initWithRootViewController:self.infoController];

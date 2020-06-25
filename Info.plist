@@ -32,6 +32,8 @@
 	<true/>
     <key>UIUserInterfaceStyle</key>
     <string>Light</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app requires access to the photo library.</string>
 	<key>UIStatusBarTintParameters</key>
 	<dict>
 		<key>UINavigationBar</key>

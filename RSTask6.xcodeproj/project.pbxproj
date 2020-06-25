@@ -20,6 +20,12 @@
 		206B5F0524A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F0324A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m */; };
 		206B5F0624A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5F0424A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib */; };
 		206B5F0C24A384D700D91375 /* UIApplication+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F0B24A384D700D91375 /* UIApplication+Additions.m */; };
+		206B5F1724A4D15500D91375 /* RST6GalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5F1624A4D15500D91375 /* RST6GalleryView.xib */; };
+		206B5F1A24A4D18100D91375 /* RST6GalleryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F1924A4D18100D91375 /* RST6GalleryView.m */; };
+		206B5F1E24A4D4FF00D91375 /* RST6GalleryCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F1C24A4D4FF00D91375 /* RST6GalleryCollectionCell.m */; };
+		206B5F1F24A4D4FF00D91375 /* RST6GalleryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5F1D24A4D4FF00D91375 /* RST6GalleryCollectionCell.xib */; };
+		206B5F2224A4DF6C00D91375 /* NSIndexPath+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F2124A4DF6C00D91375 /* NSIndexPath+Additions.m */; };
+		206B5F2524A4EED100D91375 /* RST6GalleryFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5F2424A4EED100D91375 /* RST6GalleryFlowLayout.m */; };
 		209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */; };
 		209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */; };
 		209D4C92249D751C00E9AFF3 /* RST6StartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 209D4C91249D751C00E9AFF3 /* RST6StartView.xib */; };
@@ -62,6 +68,16 @@
 		206B5F0A24A384D700D91375 /* UIApplication+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIApplication+Additions.h"; sourceTree = "<group>"; };
 		206B5F0B24A384D700D91375 /* UIApplication+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+Additions.m"; sourceTree = "<group>"; };
 		206B5F1124A3FAD100D91375 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		206B5F1624A4D15500D91375 /* RST6GalleryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RST6GalleryView.xib; sourceTree = "<group>"; };
+		206B5F1824A4D18100D91375 /* RST6GalleryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6GalleryView.h; sourceTree = "<group>"; };
+		206B5F1924A4D18100D91375 /* RST6GalleryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6GalleryView.m; sourceTree = "<group>"; };
+		206B5F1B24A4D4FF00D91375 /* RST6GalleryCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6GalleryCollectionCell.h; sourceTree = "<group>"; };
+		206B5F1C24A4D4FF00D91375 /* RST6GalleryCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6GalleryCollectionCell.m; sourceTree = "<group>"; };
+		206B5F1D24A4D4FF00D91375 /* RST6GalleryCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RST6GalleryCollectionCell.xib; sourceTree = "<group>"; };
+		206B5F2024A4DF6C00D91375 /* NSIndexPath+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSIndexPath+Additions.h"; sourceTree = "<group>"; };
+		206B5F2124A4DF6C00D91375 /* NSIndexPath+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSIndexPath+Additions.m"; sourceTree = "<group>"; };
+		206B5F2324A4EED100D91375 /* RST6GalleryFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6GalleryFlowLayout.h; sourceTree = "<group>"; };
+		206B5F2424A4EED100D91375 /* RST6GalleryFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6GalleryFlowLayout.m; sourceTree = "<group>"; };
 		209D4C88249D6C4300E9AFF3 /* RST6StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6StartViewController.h; sourceTree = "<group>"; };
 		209D4C89249D6C4300E9AFF3 /* RST6StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6StartViewController.m; sourceTree = "<group>"; };
 		209D4C8E249D6CA900E9AFF3 /* RST6TabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6TabBarController.h; sourceTree = "<group>"; };
@@ -124,6 +140,8 @@
 				206B5EFE24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.m */,
 				206B5F0224A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.h */,
 				206B5F0324A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m */,
+				206B5F1B24A4D4FF00D91375 /* RST6GalleryCollectionCell.h */,
+				206B5F1C24A4D4FF00D91375 /* RST6GalleryCollectionCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -143,6 +161,8 @@
 				20D0710E24A1503000165652 /* RST6SquareView.m */,
 				2016F62224A292BF00EB1C21 /* RST6HomeView.h */,
 				2016F62324A292BF00EB1C21 /* RST6HomeView.m */,
+				206B5F1824A4D18100D91375 /* RST6GalleryView.h */,
+				206B5F1924A4D18100D91375 /* RST6GalleryView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +176,8 @@
 				209D4C97249E64D800E9AFF3 /* UIWindow+Additions.m */,
 				206B5F0A24A384D700D91375 /* UIApplication+Additions.h */,
 				206B5F0B24A384D700D91375 /* UIApplication+Additions.m */,
+				206B5F2024A4DF6C00D91375 /* NSIndexPath+Additions.h */,
+				206B5F2124A4DF6C00D91375 /* NSIndexPath+Additions.m */,
 			);
 			path = Additions;
 			sourceTree = "<group>";
@@ -163,6 +185,8 @@
 		209D4CA0249E6E5300E9AFF3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				206B5F2324A4EED100D91375 /* RST6GalleryFlowLayout.h */,
+				206B5F2424A4EED100D91375 /* RST6GalleryFlowLayout.m */,
 				206B5EE724A362E400D91375 /* Cells */,
 				20AD85C4249D45F100A2CB96 /* Assets.xcassets */,
 				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
@@ -173,6 +197,8 @@
 				206B5EFA24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib */,
 				206B5EFF24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib */,
 				206B5F0424A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib */,
+				206B5F1624A4D15500D91375 /* RST6GalleryView.xib */,
+				206B5F1D24A4D4FF00D91375 /* RST6GalleryCollectionCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -196,10 +222,10 @@
 				209D4C8F249D6CA900E9AFF3 /* RST6TabBarController.m */,
 				209D4C99249E6D4300E9AFF3 /* RST6InfoController.h */,
 				209D4C9A249E6D4300E9AFF3 /* RST6InfoController.m */,
-				209D4C9C249E6D8D00E9AFF3 /* RST6GalleryController.h */,
-				209D4C9D249E6D8D00E9AFF3 /* RST6GalleryController.m */,
 				20D0711024A15B4900165652 /* RST6HomeController.h */,
 				20D0711124A15B4900165652 /* RST6HomeController.m */,
+				209D4C9C249E6D8D00E9AFF3 /* RST6GalleryController.h */,
+				209D4C9D249E6D8D00E9AFF3 /* RST6GalleryController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -326,6 +352,8 @@
 				209D4C92249D751C00E9AFF3 /* RST6StartView.xib in Resources */,
 				206B5F0624A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib in Resources */,
 				206B5EFC24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib in Resources */,
+				206B5F1F24A4D4FF00D91375 /* RST6GalleryCollectionCell.xib in Resources */,
+				206B5F1724A4D15500D91375 /* RST6GalleryView.xib in Resources */,
 				206B5F0124A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib in Resources */,
 				206B5EF224A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib in Resources */,
 				20AD85C5249D45F100A2CB96 /* Assets.xcassets in Resources */,
@@ -391,6 +419,7 @@
 				20AD85CB249D45F100A2CB96 /* main.m in Sources */,
 				206B5F0C24A384D700D91375 /* UIApplication+Additions.m in Sources */,
 				206B5EF624A370F500D91375 /* RS6HomeShapeCollectionViewCell.m in Sources */,
+				206B5F2524A4EED100D91375 /* RST6GalleryFlowLayout.m in Sources */,
 				209D4C98249E64D800E9AFF3 /* UIWindow+Additions.m in Sources */,
 				209D4C9B249E6D4300E9AFF3 /* RST6InfoController.m in Sources */,
 				209D4C95249E367800E9AFF3 /* RST6StartView.m in Sources */,
@@ -399,6 +428,9 @@
 				20D0710224A0FA6D00165652 /* RST6TriangleView.m in Sources */,
 				20D0710F24A1503000165652 /* RST6SquareView.m in Sources */,
 				206B5F0024A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.m in Sources */,
+				206B5F2224A4DF6C00D91375 /* NSIndexPath+Additions.m in Sources */,
+				206B5F1A24A4D18100D91375 /* RST6GalleryView.m in Sources */,
+				206B5F1E24A4D4FF00D91375 /* RST6GalleryCollectionCell.m in Sources */,
 				20AD85B7249D45E800A2CB96 /* AppDelegate.m in Sources */,
 				209D4C8A249D6C4300E9AFF3 /* RST6StartViewController.m in Sources */,
 				206B5F0524A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.m in Sources */,

@@ -1,7 +1,22 @@
 #import <UIKit/UIKit.h>
+#import <Photos/Photos.h>
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-@property (nullable, nonatomic, strong) UIWindow *window;
+@protocol PhotoDataSource <NSObject>
+
+-(void) initPhotoSource;
+@property (nonatomic, readonly, assign) NSUInteger count;
+@property (nonatomic, strong, nullable) PHFetchResult<PHAsset *> *fetchResult;
+
 
 @end
+
+
+@interface AppDelegate : UIResponder <UIApplicationDelegate, PhotoDataSource>
+
+@property (nullable, nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong, nullable) PHFetchResult<PHAsset *> *fetchResult;
+
+@end
+
+
 
