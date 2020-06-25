@@ -185,8 +185,7 @@
 		209D4CA0249E6E5300E9AFF3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				206B5F2324A4EED100D91375 /* RST6GalleryFlowLayout.h */,
-				206B5F2424A4EED100D91375 /* RST6GalleryFlowLayout.m */,
+				20B139FE24A54F2E00B7B471 /* CollectionLayouts */,
 				206B5EE724A362E400D91375 /* Cells */,
 				20AD85C4249D45F100A2CB96 /* Assets.xcassets */,
 				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
@@ -261,6 +260,15 @@
 				206B5F1124A3FAD100D91375 /* Constants.h */,
 			);
 			path = RSTask6;
+			sourceTree = "<group>";
+		};
+		20B139FE24A54F2E00B7B471 /* CollectionLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				206B5F2324A4EED100D91375 /* RST6GalleryFlowLayout.h */,
+				206B5F2424A4EED100D91375 /* RST6GalleryFlowLayout.m */,
+			);
+			path = CollectionLayouts;
 			sourceTree = "<group>";
 		};
 		20D0710324A1180A00165652 /* Utils */ = {

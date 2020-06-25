@@ -9,7 +9,6 @@
 @property (nonatomic, weak) id<PhotoDataSource> photoSource;
 @property (nonatomic, readonly) RST6GalleryView *galleryView;
 @property (nonatomic, strong) PHAsset *asset;
-@property (nonatomic, assign) CGRect previousPreheatRect;
 @property (nonatomic, strong) PHCachingImageManager *imageManager;
 @property (nonatomic, assign) CGSize thumbnailSize;
 
@@ -28,7 +27,6 @@
 -(instancetype)init{
     self = [super init];
     if(self){
-        _previousPreheatRect = CGRectZero;
         _imageManager = [PHCachingImageManager new];
         self.title = @"Gallery";
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@""
@@ -52,13 +50,10 @@
             [PHPhotoLibrary.sharedPhotoLibrary registerChangeObserver:welf];
             [welf.photoSource initPhotoSource];
             dispatch_sync(dispatch_get_main_queue(), ^{
-                [welf.galleryView.collectionView.collectionViewLayout invalidateLayout];
                 [welf.galleryView.collectionView reloadData];
             });
         }
     }];
-    
-    [self resetCachedAssets];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(statusBarOrientationChanged:)
@@ -75,9 +70,6 @@
     
     [self updateCachedAssets];
     [self.galleryView.collectionView.collectionViewLayout invalidateLayout];
-}
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
@@ -135,7 +127,6 @@
     CGFloat scale = UIScreen.mainScreen.scale;
     CGSize cellSize = self.galleryView.flowLayout.itemSize;
     self.thumbnailSize = CGSizeMake(cellSize.width*scale, cellSize.height*scale);
-    
 }
 
 -(RST6GalleryView *)galleryView{
@@ -144,7 +135,6 @@
 
 -(void)resetCachedAssets{
     [_imageManager stopCachingImagesForAllAssets];
-    _previousPreheatRect = CGRectZero;
 }
 
 - (void)photoLibraryDidChange:(PHChange *)changeInstance{
@@ -176,7 +166,7 @@
         else{
             [self.galleryView.collectionView reloadData];
         }
-        [self resetCachedAssets];
+        [self.imageManager stopCachingImagesForAllAssets];
     });
 }
 - (void)dealloc{
