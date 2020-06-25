@@ -7,7 +7,6 @@
 @interface RST6GalleryController ()
 
 @property (nonatomic, weak) id<PhotoDataSource> photoSource;
-@property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, readonly) RST6GalleryView *galleryView;
 @property (nonatomic, strong) PHAsset *asset;
 @property (nonatomic, assign) CGRect previousPreheatRect;
@@ -45,16 +44,25 @@
     self.view = [NSBundle.mainBundle loadNibNamed:@"RST6GalleryView" owner:nil options:nil][0];
     self.galleryView.collectionView.dataSource = self;
     self.galleryView.collectionView.delegate = self;
-    [self.galleryView.collectionView registerClass:RST6GalleryCollectionCell.class forCellWithReuseIdentifier:@"cell"];
-    
+    [self.galleryView.collectionView registerNib:[UINib nibWithNibName:@"RST6GalleryCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     [self.photoSource initPhotoSource];
     [self resetCachedAssets];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(statusBarOrientationChanged:)
+                                                 name:UIApplicationDidChangeStatusBarOrientationNotification
+                                               object:nil];
+}
+
+- (void)statusBarOrientationChanged:(NSNotification *)notification{
+    [self.galleryView.collectionView.collectionViewLayout invalidateLayout];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    
     [self updateCachedAssets];
-    //[self.imageManager startCachingImagesForAssets:self.photoSource.fetchResult. targetSize:self.thumbnailSize contentMode:PHImageContentModeAspectFill options:nil];
+    [self.galleryView.collectionView.collectionViewLayout invalidateLayout];
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
@@ -62,13 +70,13 @@
 }
 
 -(void)updateCachedAssets{
-//    CGRect visibleRect = CGRectMake(self.collectionView.contentOffset.x, self.collectionView.contentOffset.y, self.collectionView.bounds.size.width, self.collectionView.bounds.size.width);
-//    NSMutableArray<NSIndexPath *>* indexPaths = [NSMutableArray new];
-//    [[self.collectionView indexPathsForVisibleItems] enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-//        [indexPaths addObject:obj];
-//    }];
-//    
-//    self.imageManager start
+    CGRect visibleRect = CGRectMake(self.galleryView.collectionView.contentOffset.x, self.galleryView.collectionView.contentOffset.y, self.galleryView.collectionView.bounds.size.width, self.galleryView.collectionView.bounds.size.width);
+    NSMutableArray *fetchResultsForVisibleCells = [NSMutableArray new];
+    
+    [[self.galleryView.collectionView indexPathsForVisibleItems] enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [fetchResultsForVisibleCells addObject:self.photoSource.fetchResult[obj.item]];
+    }];
+    [self.imageManager startCachingImagesForAssets:fetchResultsForVisibleCells targetSize:self.thumbnailSize contentMode:PHImageContentModeAspectFill options:nil];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -84,11 +92,12 @@
     cell.representedAssetIdentifier = asset.localIdentifier;
     __weak RST6GalleryCollectionCell* weakCell = cell;
     [self.imageManager requestImageForAsset:asset targetSize:self.thumbnailSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
-        if(weakCell.representedAssetIdentifier == asset.localIdentifier){
+        if([weakCell.representedAssetIdentifier compare:asset.localIdentifier] == NSOrderedSame){
             weakCell.imageView.image = result;
             NSLog(@"%@", @"cell.thumbnailImage = image");
         }
     }];
+    cell.backgroundColor = UIColor.greenColor;
     return cell;
 }
 
@@ -123,27 +132,27 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         self.photoSource.fetchResult = changes.fetchResultAfterChanges;
         if(changes.hasIncrementalChanges){
-            [self.collectionView performBatchUpdates:^{
+            [self.galleryView.collectionView performBatchUpdates:^{
                 NSIndexSet *removed = changes.removedIndexes;
                 if(removed && removed.count > 0){
-                    [self.collectionView deleteItemsAtIndexPaths:[NSIndexPath nsIndexPathArrayFromNSIndexSet:removed]];
+                    [self.galleryView.collectionView deleteItemsAtIndexPaths:[NSIndexPath nsIndexPathArrayFromNSIndexSet:removed]];
                 }
                 NSIndexSet *inserted = changes.insertedIndexes;
                 if(inserted && inserted.count > 0){
-                    [self.collectionView insertItemsAtIndexPaths:[NSIndexPath nsIndexPathArrayFromNSIndexSet:inserted]];
+                    [self.galleryView.collectionView insertItemsAtIndexPaths:[NSIndexPath nsIndexPathArrayFromNSIndexSet:inserted]];
                 }
                 [changes enumerateMovesWithBlock:^(NSUInteger fromIndex, NSUInteger toIndex) {
-                    [self.collectionView moveItemAtIndexPath:[NSIndexPath indexPathForItem:fromIndex inSection:0] toIndexPath:[NSIndexPath indexPathForItem:toIndex inSection:0]];
+                    [self.galleryView.collectionView moveItemAtIndexPath:[NSIndexPath indexPathForItem:fromIndex inSection:0] toIndexPath:[NSIndexPath indexPathForItem:toIndex inSection:0]];
                 }];
                 
                 NSIndexSet *changedIndexes = changes.changedIndexes;
                 if(changedIndexes && changedIndexes.count > 0){
-                    [self.collectionView reloadItemsAtIndexPaths:[NSIndexPath nsIndexPathArrayFromNSIndexSet:changedIndexes]];
+                    [self.galleryView.collectionView reloadItemsAtIndexPaths:[NSIndexPath nsIndexPathArrayFromNSIndexSet:changedIndexes]];
                 }
             } completion:nil];
         }
         else{
-            [self.collectionView reloadData];
+            [self.galleryView.collectionView reloadData];
         }
         [self resetCachedAssets];
     });
