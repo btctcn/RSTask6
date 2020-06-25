@@ -2,9 +2,4 @@
 
 @implementation RST6GalleryCollectionCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
 @end
