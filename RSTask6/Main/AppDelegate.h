@@ -15,6 +15,7 @@
 
 @property (nullable, nonatomic, strong) UIWindow *window;
 @property (nonatomic, strong, nullable) PHFetchResult<PHAsset *> *fetchResult;
++(void)setRotationEnabled:(BOOL)enabled;
 
 @end
 

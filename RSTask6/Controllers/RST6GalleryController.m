@@ -4,6 +4,7 @@
 #import <Photos/Photos.h>
 #import "NSIndexPath+Additions.h"
 #import <QuickLook/QuickLook.h>
+#import "RST6PreviewController.h"
 
 @interface RST6GalleryController ()
 
@@ -129,9 +130,13 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
-    QLPreviewController *previewController = [QLPreviewController new];
-    
     PHAsset *asset = self.photoSource.fetchResult[indexPath.item];
+    RST6PreviewController *previewController = [[RST6PreviewController alloc] initWithNibName:@"RST6PreviewController" bundle:nil];
+    previewController.asset = asset;
+    
+    
+    [self presentViewController:[[UINavigationController alloc]initWithRootViewController:previewController]  animated:true completion:nil];
+    //PHAsset *asset = self.photoSource.fetchResult[indexPath.item];
 //    __weak typeof(self) welf = self;
 //    [asset requestContentEditingInputWithOptions:[PHContentEditingInputRequestOptions new] completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
 //        welf.previewUrl = contentEditingInput.fullSizeImageURL;

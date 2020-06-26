@@ -12,9 +12,12 @@
 
 @property (nonatomic, strong) RST6StartViewController *startController;
 @property (nonatomic, strong) RST6TabBarController *tabController;
+
 @end
 
 @implementation AppDelegate
+
+static BOOL rotationEnabled = true;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
     [self registerToNotifications];
@@ -76,7 +79,16 @@
     fetchOptions.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"creationDate" ascending:NO]];
     self.fetchResult = [PHAsset fetchAssetsWithOptions:fetchOptions];
 }
+
 -(NSUInteger)count{
     return [self.fetchResult count];
+}
+
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window{
+    return (rotationEnabled) ? UIInterfaceOrientationMaskAllButUpsideDown : UIInterfaceOrientationMaskPortrait;
+}
+
++(void)setRotationEnabled:(BOOL)enabled{
+    rotationEnabled = enabled;
 }
 @end
