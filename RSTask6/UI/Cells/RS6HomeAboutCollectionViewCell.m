@@ -19,15 +19,10 @@
     
     [_innerCollectionView registerNib:[UINib nibWithNibName:@"RST6AppleLogoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"appleLogo"];
     [_innerCollectionView registerNib:[UINib nibWithNibName:@"RST6DeviceInfoCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"deviceInfo"];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(statusBarOrientationChanged:)
-                                                 name:UIApplicationDidChangeStatusBarOrientationNotification
-                                               object:nil];
 }
 
-- (void)statusBarOrientationChanged:(NSNotification *)notification{
-    [_innerCollectionView.collectionViewLayout invalidateLayout];
+- (void)layoutSubviews{
+    [_innerCollectionView reloadData];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

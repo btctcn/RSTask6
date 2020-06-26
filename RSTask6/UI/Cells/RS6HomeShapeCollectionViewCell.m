@@ -23,14 +23,10 @@ typedef NS_ENUM(NSInteger, ShapeType) {
     [_innerCollectionView setDelegate:self];
     
     [_innerCollectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"shapeCell"];
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(statusBarOrientationChanged:)
-                                                 name:UIApplicationDidChangeStatusBarOrientationNotification
-                                               object:nil];
 }
 
-- (void)statusBarOrientationChanged:(NSNotification *)notification{
-    [_innerCollectionView.collectionViewLayout invalidateLayout];
+- (void)layoutSubviews{
+    [_innerCollectionView reloadData];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -70,7 +66,9 @@ typedef NS_ENUM(NSInteger, ShapeType) {
         innerView.backgroundColor = UIColor.whiteColor;
         innerView.translatesAutoresizingMaskIntoConstraints = NO;
         cell.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+        [[cell.contentView subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
         [cell.contentView addSubview:innerView];
+        
         [NSLayoutConstraint activateConstraints:@[
             [innerView.centerXAnchor constraintEqualToAnchor:cell.centerXAnchor],
             [innerView.centerYAnchor constraintEqualToAnchor:cell.centerYAnchor constant:centerDelta],
