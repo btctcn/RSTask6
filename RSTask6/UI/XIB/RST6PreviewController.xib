@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RST6PreviewController">
             <connections>
+                <outlet property="contentView" destination="n8r-28-7PJ" id="87P-zj-gkF"/>
                 <outlet property="creationDateLabel" destination="IOg-ru-Al7" id="jKA-3m-bLu"/>
+                <outlet property="imageView" destination="npS-25-rwe" id="uRv-Ux-mVQ"/>
+                <outlet property="livePhotoView" destination="QZO-Hy-YxN" id="BcE-Kc-8d8"/>
                 <outlet property="modificationDateLabel" destination="gNQ-gA-ceK" id="oDQ-Ci-dj4"/>
                 <outlet property="shareButton" destination="iWV-vQ-eXe" id="ZM4-HL-QCx"/>
                 <outlet property="typeLabel" destination="14e-KS-qS3" id="aDV-CW-E0a"/>
@@ -25,24 +28,24 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n8r-28-7PJ" userLabel="contentView">
                     <rect key="frame" x="20" y="0.0" width="335" height="433.5"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQb-62-MgW" customClass="PHLivePhotoView">
-                            <rect key="frame" x="0.0" y="0.0" width="335" height="433.5"/>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="npS-25-rwe" userLabel="imageView">
                             <rect key="frame" x="0.0" y="0.0" width="335" height="433.5"/>
                         </imageView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZO-Hy-YxN" customClass="PHLivePhotoView">
+                            <rect key="frame" x="0.0" y="0.0" width="335" height="433.5"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
+                        <constraint firstItem="QZO-Hy-YxN" firstAttribute="width" secondItem="n8r-28-7PJ" secondAttribute="width" id="FyQ-Ro-KhO"/>
                         <constraint firstItem="npS-25-rwe" firstAttribute="centerX" secondItem="n8r-28-7PJ" secondAttribute="centerX" id="HzA-ig-9Fl"/>
                         <constraint firstItem="npS-25-rwe" firstAttribute="centerY" secondItem="n8r-28-7PJ" secondAttribute="centerY" id="LZR-FQ-wtt"/>
+                        <constraint firstItem="QZO-Hy-YxN" firstAttribute="centerX" secondItem="n8r-28-7PJ" secondAttribute="centerX" id="c1w-Zb-Alu"/>
+                        <constraint firstItem="QZO-Hy-YxN" firstAttribute="height" secondItem="n8r-28-7PJ" secondAttribute="height" id="hBW-dq-9o6"/>
                         <constraint firstItem="npS-25-rwe" firstAttribute="height" secondItem="n8r-28-7PJ" secondAttribute="height" id="i6O-mX-2bC"/>
+                        <constraint firstItem="QZO-Hy-YxN" firstAttribute="centerY" secondItem="n8r-28-7PJ" secondAttribute="centerY" id="iNh-fi-IKj"/>
                         <constraint firstItem="npS-25-rwe" firstAttribute="width" secondItem="n8r-28-7PJ" secondAttribute="width" id="pmX-9r-OBp"/>
-                        <constraint firstItem="UQb-62-MgW" firstAttribute="centerX" secondItem="n8r-28-7PJ" secondAttribute="centerX" id="q9g-Ju-dVO"/>
-                        <constraint firstItem="UQb-62-MgW" firstAttribute="width" secondItem="n8r-28-7PJ" secondAttribute="width" id="sJU-TD-bwO"/>
-                        <constraint firstItem="UQb-62-MgW" firstAttribute="centerY" secondItem="n8r-28-7PJ" secondAttribute="centerY" id="tv7-Ju-gQd"/>
-                        <constraint firstItem="UQb-62-MgW" firstAttribute="height" secondItem="n8r-28-7PJ" secondAttribute="height" id="uey-Fk-lSh"/>
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Creation date:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M96-Uu-MwZ">

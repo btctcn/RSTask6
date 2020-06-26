@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2016F62424A292BF00EB1C21 /* RST6HomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2016F62324A292BF00EB1C21 /* RST6HomeView.m */; };
 		2016F62624A2931700EB1C21 /* RST6HomeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2016F62524A2931700EB1C21 /* RST6HomeView.xib */; };
+		20544F1024A6415800A471C4 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20544F0F24A6415700A471C4 /* PhotosUI.framework */; };
 		206B5EF124A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5EEF24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m */; };
 		206B5EF224A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 206B5EF024A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib */; };
 		206B5EF624A370F500D91375 /* RS6HomeShapeCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 206B5EF424A370F500D91375 /* RS6HomeShapeCollectionViewCell.m */; };
@@ -52,6 +53,7 @@
 		2016F62224A292BF00EB1C21 /* RST6HomeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6HomeView.h; sourceTree = "<group>"; };
 		2016F62324A292BF00EB1C21 /* RST6HomeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6HomeView.m; sourceTree = "<group>"; };
 		2016F62524A2931700EB1C21 /* RST6HomeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RST6HomeView.xib; sourceTree = "<group>"; };
+		20544F0F24A6415700A471C4 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		206B5EEE24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RS6HomeAboutCollectionViewCell.h; sourceTree = "<group>"; };
 		206B5EEF24A370DE00D91375 /* RS6HomeAboutCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RS6HomeAboutCollectionViewCell.m; sourceTree = "<group>"; };
 		206B5EF024A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RS6HomeAboutCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */,
+				20544F1024A6415800A471C4 /* PhotosUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +309,7 @@
 		BF722FEB551C7EF98506366D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20544F0F24A6415700A471C4 /* PhotosUI.framework */,
 				5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */,
 			);
 			name = Frameworks;
