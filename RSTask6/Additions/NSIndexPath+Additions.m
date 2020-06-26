@@ -12,5 +12,15 @@
     return allIndexPaths;
 }
 
++(NSArray <NSIndexPath*>*) nsIndexPathSectionArrayFromNSIndexSet:(NSIndexSet*)indexSet{
+    NSMutableArray *allIndexPaths = [[NSMutableArray alloc] init];
+                   [indexSet enumerateIndexesUsingBlock:^(NSUInteger idx, BOOL * _Nonnull stop)
+                    {
+                       NSIndexPath *indexPath = [NSIndexPath indexPathForItem:0 inSection:idx];
+                       [allIndexPaths addObject:indexPath];
+                   }];
+    return allIndexPaths;
+}
+
 @end
 

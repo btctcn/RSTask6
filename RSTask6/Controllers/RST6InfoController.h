@@ -3,7 +3,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface RST6InfoController : UIViewController// <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface RST6InfoController : UITableViewController <PHPhotoLibraryChangeObserver>
 
 - (instancetype)initWithDataSource:(id<PhotoDataSource>)photosSource;
 
