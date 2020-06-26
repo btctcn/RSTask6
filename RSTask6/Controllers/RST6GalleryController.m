@@ -3,6 +3,7 @@
 #import "RST6GalleryCollectionCell.h"
 #import <Photos/Photos.h>
 #import "NSIndexPath+Additions.h"
+#import <QuickLook/QuickLook.h>
 
 @interface RST6GalleryController ()
 
@@ -11,6 +12,7 @@
 @property (nonatomic, strong) PHAsset *asset;
 @property (nonatomic, strong) PHCachingImageManager *imageManager;
 @property (nonatomic, assign) CGSize thumbnailSize;
+@property (nonatomic, strong) NSURL *previewUrl;
 
 @end
 
@@ -95,7 +97,6 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSLog(@"self.photoSource.count = %@", @(self.photoSource.count));
     return self.photoSource.count;
 }
 
@@ -108,10 +109,8 @@
     [self.imageManager requestImageForAsset:asset targetSize:self.thumbnailSize contentMode:PHImageContentModeAspectFill options:nil resultHandler:^(UIImage * _Nullable result, NSDictionary * _Nullable info) {
         if([weakCell.representedAssetIdentifier compare:asset.localIdentifier] == NSOrderedSame){
             weakCell.imageView.image = result;
-            NSLog(@"%@", @"cell.thumbnailImage = image");
         }
     }];
-    cell.backgroundColor = UIColor.greenColor;
     return cell;
 }
 
@@ -127,6 +126,21 @@
     CGFloat scale = UIScreen.mainScreen.scale;
     CGSize cellSize = self.galleryView.flowLayout.itemSize;
     self.thumbnailSize = CGSizeMake(cellSize.width*scale, cellSize.height*scale);
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    QLPreviewController *previewController = [QLPreviewController new];
+    
+    PHAsset *asset = self.photoSource.fetchResult[indexPath.item];
+//    __weak typeof(self) welf = self;
+//    [asset requestContentEditingInputWithOptions:[PHContentEditingInputRequestOptions new] completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
+//        welf.previewUrl = contentEditingInput.fullSizeImageURL;
+//        [welf.previewUrl startAccessingSecurityScopedResource];
+//        previewController.dataSource = welf;
+//        [welf presentViewController:previewController animated:true completion:^{
+//            //[welf.previewUrl stopAccessingSecurityScopedResource];
+//        }];
+//    }];
 }
 
 -(RST6GalleryView *)galleryView{

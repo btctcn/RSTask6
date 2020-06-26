@@ -1,6 +1,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import <Photos/Photos.h>
+#import <QuickLook/QuickLook.h>
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -37,6 +37,7 @@
 		20AD85C5249D45F100A2CB96 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20AD85C4249D45F100A2CB96 /* Assets.xcassets */; };
 		20AD85CB249D45F100A2CB96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AD85CA249D45F100A2CB96 /* main.m */; };
 		20AD85D2249D565A00A2CB96 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */; };
+		20B13A0124A5550500B7B471 /* RST6PreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20B13A0024A5550500B7B471 /* RST6PreviewController.m */; };
 		20D070FF24A0F73500165652 /* RST6AnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D070FE24A0F73500165652 /* RST6AnimatedView.m */; };
 		20D0710224A0FA6D00165652 /* RST6TriangleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710124A0FA6D00165652 /* RST6TriangleView.m */; };
 		20D0710624A1183E00165652 /* UIColor+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710524A1183E00165652 /* UIColor+Additions.m */; };
@@ -98,6 +99,8 @@
 		20AD85C9249D45F100A2CB96 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		20AD85CA249D45F100A2CB96 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		20B139FF24A5550500B7B471 /* RST6PreviewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6PreviewController.h; sourceTree = "<group>"; };
+		20B13A0024A5550500B7B471 /* RST6PreviewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6PreviewController.m; sourceTree = "<group>"; };
 		20D070FD24A0F73500165652 /* RST6AnimatedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6AnimatedView.h; sourceTree = "<group>"; };
 		20D070FE24A0F73500165652 /* RST6AnimatedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6AnimatedView.m; sourceTree = "<group>"; };
 		20D0710024A0FA6D00165652 /* RST6TriangleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6TriangleView.h; sourceTree = "<group>"; };
@@ -185,19 +188,11 @@
 		209D4CA0249E6E5300E9AFF3 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				20B139FE24A54F2E00B7B471 /* CollectionLayouts */,
 				206B5EE724A362E400D91375 /* Cells */,
+				20B139FE24A54F2E00B7B471 /* CollectionLayouts */,
+				208F161C24A0C3AF00D996AB /* Views */,
+				20B13A0224A5E23900B7B471 /* XIB */,
 				20AD85C4249D45F100A2CB96 /* Assets.xcassets */,
-				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
-				209D4C91249D751C00E9AFF3 /* RST6StartView.xib */,
-				2016F62524A2931700EB1C21 /* RST6HomeView.xib */,
-				206B5EF024A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib */,
-				206B5EF524A370F500D91375 /* RS6HomeShapeCollectionViewCell.xib */,
-				206B5EFA24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib */,
-				206B5EFF24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib */,
-				206B5F0424A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib */,
-				206B5F1624A4D15500D91375 /* RST6GalleryView.xib */,
-				206B5F1D24A4D4FF00D91375 /* RST6GalleryCollectionCell.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -225,6 +220,8 @@
 				20D0711124A15B4900165652 /* RST6HomeController.m */,
 				209D4C9C249E6D8D00E9AFF3 /* RST6GalleryController.h */,
 				209D4C9D249E6D8D00E9AFF3 /* RST6GalleryController.m */,
+				20B139FF24A5550500B7B471 /* RST6PreviewController.h */,
+				20B13A0024A5550500B7B471 /* RST6PreviewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -253,7 +250,6 @@
 			children = (
 				209D4C9F249E6E0500E9AFF3 /* Additions */,
 				209D4CA2249E6E8700E9AFF3 /* Controllers */,
-				208F161C24A0C3AF00D996AB /* Views */,
 				209D4CA0249E6E5300E9AFF3 /* UI */,
 				20D0710324A1180A00165652 /* Utils */,
 				209D4CA1249E6E7700E9AFF3 /* Main */,
@@ -269,6 +265,23 @@
 				206B5F2424A4EED100D91375 /* RST6GalleryFlowLayout.m */,
 			);
 			path = CollectionLayouts;
+			sourceTree = "<group>";
+		};
+		20B13A0224A5E23900B7B471 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				20AD85D1249D565A00A2CB96 /* Launch Screen.storyboard */,
+				209D4C91249D751C00E9AFF3 /* RST6StartView.xib */,
+				2016F62524A2931700EB1C21 /* RST6HomeView.xib */,
+				206B5EF024A370DE00D91375 /* RS6HomeAboutCollectionViewCell.xib */,
+				206B5EF524A370F500D91375 /* RS6HomeShapeCollectionViewCell.xib */,
+				206B5EFA24A3711200D91375 /* RS6HomeActionsCollectionViewCell.xib */,
+				206B5EFF24A37FBB00D91375 /* RST6AppleLogoCollectionViewCell.xib */,
+				206B5F0424A3800D00D91375 /* RST6DeviceInfoCollectionViewCell.xib */,
+				206B5F1624A4D15500D91375 /* RST6GalleryView.xib */,
+				206B5F1D24A4D4FF00D91375 /* RST6GalleryCollectionCell.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		20D0710324A1180A00165652 /* Utils */ = {
@@ -422,6 +435,7 @@
 				20D0711224A15B4900165652 /* RST6HomeController.m in Sources */,
 				20D0710C24A13A5D00165652 /* RST6RoundView.m in Sources */,
 				209D4C90249D6CA900E9AFF3 /* RST6TabBarController.m in Sources */,
+				20B13A0124A5550500B7B471 /* RST6PreviewController.m in Sources */,
 				20D070FF24A0F73500165652 /* RST6AnimatedView.m in Sources */,
 				20D0710624A1183E00165652 /* UIColor+Additions.m in Sources */,
 				20AD85CB249D45F100A2CB96 /* main.m in Sources */,
