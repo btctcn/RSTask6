@@ -48,7 +48,6 @@
 		20D0710C24A13A5D00165652 /* RST6RoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710B24A13A5D00165652 /* RST6RoundView.m */; };
 		20D0710F24A1503000165652 /* RST6SquareView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0710E24A1503000165652 /* RST6SquareView.m */; };
 		20D0711224A15B4900165652 /* RST6HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20D0711124A15B4900165652 /* RST6HomeController.m */; };
-		86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,9 +121,6 @@
 		20D0710E24A1503000165652 /* RST6SquareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6SquareView.m; sourceTree = "<group>"; };
 		20D0711024A15B4900165652 /* RST6HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RST6HomeController.h; sourceTree = "<group>"; };
 		20D0711124A15B4900165652 /* RST6HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RST6HomeController.m; sourceTree = "<group>"; };
-		5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RSTask6.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.release.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.release.xcconfig"; sourceTree = "<group>"; };
-		90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSTask6.debug.xcconfig"; path = "Target Support Files/Pods-RSTask6/Pods-RSTask6.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +128,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86246143FF7591B407B02C3A /* libPods-RSTask6.a in Frameworks */,
 				20544F1024A6415800A471C4 /* PhotosUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,8 +319,6 @@
 		BA6FB21305AE48443C98FA29 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */,
-				86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -334,7 +327,6 @@
 			isa = PBXGroup;
 			children = (
 				20544F0F24A6415700A471C4 /* PhotosUI.framework */,
-				5A84C5B303E97B3C8D9A495D /* libPods-RSTask6.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -346,11 +338,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 20AD85CE249D45F200A2CB96 /* Build configuration list for PBXNativeTarget "RSTask6" */;
 			buildPhases = (
-				0C0EDB9CAABE5755189BA1E2 /* [CP] Check Pods Manifest.lock */,
 				20AD85AE249D45E800A2CB96 /* Sources */,
 				20AD85AF249D45E800A2CB96 /* Frameworks */,
 				20AD85B0249D45E800A2CB96 /* Resources */,
-				BA09F4015C1C8A3DAF1DC3BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -415,48 +405,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		0C0EDB9CAABE5755189BA1E2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RSTask6-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BA09F4015C1C8A3DAF1DC3BD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RSTask6/Pods-RSTask6-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RSTask6/Pods-RSTask6-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSTask6/Pods-RSTask6-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		20AD85AE249D45E800A2CB96 /* Sources */ = {
@@ -624,7 +572,6 @@
 		};
 		20AD85CF249D45F200A2CB96 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90DD60059AFB4300A3F301B1 /* Pods-RSTask6.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -642,7 +589,6 @@
 		};
 		20AD85D0249D45F200A2CB96 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86B7CAE1E83F707C440F9A38 /* Pods-RSTask6.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
