@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -255,7 +255,6 @@
 				20AD85B4249D45E800A2CB96 /* RSTask6 */,
 				20AD85C9249D45F100A2CB96 /* Info.plist */,
 				20AD85B3249D45E800A2CB96 /* Products */,
-				BA6FB21305AE48443C98FA29 /* Pods */,
 				BF722FEB551C7EF98506366D /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -274,7 +273,6 @@
 				209D4C9F249E6E0500E9AFF3 /* Additions */,
 				209D4CA2249E6E8700E9AFF3 /* Controllers */,
 				209D4CA0249E6E5300E9AFF3 /* UI */,
-				20D0710324A1180A00165652 /* Utils */,
 				209D4CA1249E6E7700E9AFF3 /* Main */,
 				206B5F1124A3FAD100D91375 /* Constants.h */,
 			);
@@ -307,20 +305,6 @@
 				20544F1A24A65BA200A471C4 /* RST6InfoTableViewCell.xib */,
 			);
 			path = XIB;
-			sourceTree = "<group>";
-		};
-		20D0710324A1180A00165652 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		BA6FB21305AE48443C98FA29 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		BF722FEB551C7EF98506366D /* Frameworks */ = {
