@@ -50,11 +50,11 @@
     __weak typeof(self) welf = self;
     [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
         if (status == PHAuthorizationStatusAuthorized) {
-            [PHPhotoLibrary.sharedPhotoLibrary registerChangeObserver:welf];
             [welf.photoSource initPhotoSource];
             dispatch_sync(dispatch_get_main_queue(), ^{
                 [welf.galleryView.collectionView reloadData];
             });
+            [PHPhotoLibrary.sharedPhotoLibrary registerChangeObserver:welf];
         }
     }];
     
@@ -86,8 +86,11 @@
 }
 
 -(void)updateCachedAssets{
+    if(PHPhotoLibrary.authorizationStatus != PHAuthorizationStatusAuthorized) return;
     [self.imageManager stopCachingImagesForAllAssets];
-    CGRect visibleRect = CGRectMake(self.galleryView.collectionView.contentOffset.x, self.galleryView.collectionView.contentOffset.y, self.galleryView.collectionView.bounds.size.width, self.galleryView.collectionView.bounds.size.width);
+    CGPoint co = self.galleryView.collectionView.contentOffset;
+    CGSize size = self.galleryView.collectionView.bounds.size;
+    CGRect visibleRect = CGRectMake(co.x,co.y, size.width, size.height);
     NSMutableArray *fetchResultsForVisibleCells = [NSMutableArray new];
     
     [[self.galleryView.collectionView indexPathsForVisibleItems] enumerateObjectsUsingBlock:^(NSIndexPath * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
@@ -133,19 +136,7 @@
     PHAsset *asset = self.photoSource.fetchResult[indexPath.item];
     RST6PreviewController *previewController = [[RST6PreviewController alloc] initWithNibName:@"RST6PreviewController" bundle:nil];
     previewController.asset = asset;
-    
-    
     [self presentViewController:[[UINavigationController alloc]initWithRootViewController:previewController]  animated:true completion:nil];
-    //PHAsset *asset = self.photoSource.fetchResult[indexPath.item];
-//    __weak typeof(self) welf = self;
-//    [asset requestContentEditingInputWithOptions:[PHContentEditingInputRequestOptions new] completionHandler:^(PHContentEditingInput * _Nullable contentEditingInput, NSDictionary * _Nonnull info) {
-//        welf.previewUrl = contentEditingInput.fullSizeImageURL;
-//        [welf.previewUrl startAccessingSecurityScopedResource];
-//        previewController.dataSource = welf;
-//        [welf presentViewController:previewController animated:true completion:^{
-//            //[welf.previewUrl stopAccessingSecurityScopedResource];
-//        }];
-//    }];
 }
 
 -(RST6GalleryView *)galleryView{
